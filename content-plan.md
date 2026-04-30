@@ -27,7 +27,7 @@
 ## Initial Content Strategy (30 Days)
 
 ### Week 1: Foundation
-- [ ] Finalize domain purchase (aitoolhub.com)
+- [ ] Finalize domain purchase (aiwarehq.com)
 - [ ] Set up Cloudflare Pages deployment
 - [ ] Create category pages
 - [ ] Add Google Analytics or Plausible

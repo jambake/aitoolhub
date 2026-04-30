@@ -3,7 +3,7 @@
 ## Option 1: Cloudflare Pages (Recommended - Free)
 
 ### Step 1: Buy Domain
-1. Go to **Cloudflare.com** → Register → Buy `aitoolhub.com`
+1. Go to **Cloudflare.com** → Register → Buy `aiwarehq.com`
 2. Or use **Namecheap** or **GoDaddy** (~$15/year)
 
 ### Step 2: Connect to Cloudflare Pages
@@ -17,7 +17,7 @@
 - **Build settings:** Leave empty (static HTML)
 - **Domain:** Add your custom domain
 
-**Done!** Your site will be live at `https://aitoolhub.com`
+**Done!** Your site will be live at `https://aiwarehq.com`
 
 ---
 
