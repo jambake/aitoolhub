@@ -74,7 +74,11 @@
             padding: 25px;
             transition: transform 0.2s, box-shadow 0.2s;
         }
-        .category-card:hover {
+        .category-card-link {
+            text-decoration: none;
+            color: inherit;
+        }
+        .category-card-link:hover .category-card {
             transform: translateY(-3px);
             box-shadow: 0 10px 30px rgba(0,0,0,0.08);
         }
@@ -130,17 +134,17 @@
         <div id="categories">
             <h2 style="text-align:center; margin-bottom:30px;">Browse by Category</h2>
             <div class="categories">
-                <div class="category-card">
+                <a href="/writing-tools/" class="category-card-link"><div class="category-card">
                     <h3>✍️ AI Writing Tools</h3>
                     <p>AI-powered writing assistants for content creation, copywriting, and editing.</p>
                     <span class="count">12 Tools</span>
-                </div>
-                <div class="category-card">
+                </div></a>
+                <a href="/image-tools/" class="category-card-link"><div class="category-card">
                     <h3>🎨 AI Image Generators</h3>
                     <p>Create stunning images from text prompts with these powerful AI tools.</p>
                     <span class="count">10 Tools</span>
-                </div>
-                <div class="category-card">
+                </div></a>
+                <a href="/coding-tools/" class="category-card-link"><div class="category-card">
                     <h3>💻 AI Coding Assistants</h3>
                     <p>AI pair programmers that help you write better code, faster.</p>
                     <span class="count">8 Tools</span>
