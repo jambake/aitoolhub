@@ -3,265 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Ware HQ - Best AI Tools & Deals 💰</title>
-    <meta name="description" content="Find the best AI tools. Get exclusive deals, discounts, and earn cash back with our curated affiliate links.">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://aiwarehq.com/">
+    <title>Inkspyr Studio | Premium Die-Cut Stickers</title>
+    <meta name="description" content="Hand-designed die-cut stickers for laptops, water bottles, and more. Premium vinyl, weather-resistant. Free shipping on orders over $35.">
+    <link rel="stylesheet" href="assets/style.css">
     <style>
-        :root { --primary: #2563eb; --primary-dark: #1d4ed8; --text: #1f2937; --text-light: #6b7280; --bg: #ffffff; --bg-alt: #f9fafb; --border: #e5e7eb; --money: #16a34a; }
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: var(--text); max-width: 900px; margin: 0 auto; padding: 20px; }
-        header { text-align: center; padding: 30px 0; border-bottom: 1px solid var(--border); }
-        h1 { font-size: 2.2rem; margin-bottom: 8px; color: var(--primary); }
-        .tagline { color: var(--text-light); font-size: 1.1rem; }
-        nav { display: flex; justify-content: center; gap: 20px; padding: 15px 0; border-bottom: 1px solid var(--border); flex-wrap: wrap; }
-        nav a { text-decoration: none; color: var(--text); font-weight: 500; font-size: 0.95rem; }
-        nav a:hover { color: var(--primary); }
-        main { padding: 30px 0; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0f0f0f; color: #fff; line-height: 1.6; }
         
-        /* DEALS SECTION - PRIORITY */
-        .deals-banner { background: linear-gradient(135deg, #16a34a 0%, #15803d 100%); color: white; padding: 30px; border-radius: 12px; text-align: center; margin-bottom: 30px; }
-        .deals-banner h2 { font-size: 1.8rem; margin-bottom: 10px; }
-        .deals-banner p { opacity: 0.95; margin-bottom: 20px; }
-        .deals-grid { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
-        .deal-btn { background: white; color: #16a34a; padding: 12px 25px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 0.95rem; }
-        .deal-btn:hover { background: #f0fdf4; transform: translateY(-2px); }
+        header { background: rgba(0,0,0,0.8); backdrop-filter: blur(10px); padding: 1rem 2rem; position: fixed; width: 100%; z-index: 100; }
+        nav { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: 800; color: #fff; text-decoration: none; letter-spacing: -0.5px; }
+        .logo span { color: #a855f7; }
         
-        .hero { text-align: center; padding: 30px 20px; background: var(--bg-alt); border-radius: 12px; margin-bottom: 30px; }
-        .hero h2 { font-size: 1.5rem; margin-bottom: 10px; }
-        .hero p { color: var(--text-light); max-width: 600px; margin: 0 auto 15px; }
+        .hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 2rem; background: radial-gradient(ellipse at top, #1e1e3f 0%, #0f0f0f 70%); }
+        .hero-content { max-width: 700px; }
+        .badge { display: inline-block; background: rgba(168, 85, 247, 0.2); color: #a855f7; padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.875rem; font-weight: 500; margin-bottom: 1.5rem; border: 1px solid rgba(168, 85, 247, 0.3); }
+        .hero h1 { font-size: clamp(2.5rem, 8vw, 4.5rem); font-weight: 800; margin-bottom: 1.5rem; line-height: 1.1; background: linear-gradient(135deg, #fff 0%, #a855f7 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .hero p { font-size: 1.25rem; color: #888; margin-bottom: 2.5rem; }
         
-        .categories { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-top: 30px; }
-        @media (max-width: 900px) { .categories { grid-template-columns: repeat(2, 1fr); } }
-        @media (max-width: 600px) { .categories { grid-template-columns: 1fr; } }
-        .category-card-link { text-decoration: none; color: inherit; display: block; }
-        .category-card { border: 1px solid var(--border); border-radius: 10px; padding: 18px; transition: transform 0.2s; }
-        .category-card-link:hover .category-card { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.08); }
-        .category-card h3 { margin-bottom: 8px; color: var(--primary); font-size: 1.1rem; }
-        .category-card p { color: var(--text-light); font-size: 0.9rem; }
+        .cta-group { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+        .cta-primary { display: inline-block; background: #a855f7; color: white; padding: 1rem 2.5rem; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 1.1rem; transition: all 0.3s; border: none; cursor: pointer; }
+        .cta-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 40px rgba(168, 85, 247, 0.4); background: #9333ea; }
+        .cta-secondary { display: inline-block; background: transparent; color: #fff; padding: 1rem 2.5rem; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 1.1rem; border: 2px solid #333; transition: all 0.3s; }
+        .cta-secondary:hover { border-color: #666; background: rgba(255,255,255,0.05); }
         
-        /* DIGITAL PRODUCTS - MONEY MAKER */
-        .products-section { background: #f0fdf4; border: 2px solid #16a34a; padding: 30px; border-radius: 12px; margin-top: 40px; }
-        .products-section h2 { color: #16a34a; margin-bottom: 8px; text-align: center; }
-        .products-section > p { text-align: center; color: var(--text-light); margin-bottom: 25px; }
-        .product-grid { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
-        .product-card { background: white; padding: 25px; border-radius: 10px; width: 280px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
-        .product-card h3 { font-size: 1.1rem; margin-bottom: 8px; }
-        .product-card .price { font-size: 1.4rem; font-weight: bold; color: #16a34a; margin-bottom: 12px; }
-        .product-card .buy-btn { display: block; background: #16a34a; color: white; text-align: center; padding: 12px; border-radius: 8px; text-decoration: none; font-weight: 600; }
-        .product-card .buy-btn:hover { background: #15803d; }
+        .social-proof { padding: 4rem 2rem; background: #0a0a0a; }
+        .proof-grid { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; text-align: center; }
+        .proof-item h3 { font-size: 2.5rem; color: #a855f7; margin-bottom: 0.5rem; }
+        .proof-item p { color: #666; font-size: 0.95rem; }
         
-        footer { text-align: center; padding: 30px 0; border-top: 1px solid var(--border); color: var(--text-light); font-size: 0.85rem; }
-        .affiliate-disclaimer { background: #fef3c7; padding: 12px; border-radius: 8px; font-size: 0.8rem; margin-top: 25px; text-align: center; }
+        .featured { padding: 4rem 2rem; }
+        .featured h2 { text-align: center; font-size: 2rem; margin-bottom: 3rem; }
+        .sticker-scroll { display: flex; gap: 1.5rem; overflow-x: auto; padding: 1rem 0; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; }
+        .sticker-scroll::-webkit-scrollbar { display: none; }
+        .sticker-card { min-width: 250px; background: #1a1a1a; border-radius: 16px; overflow: hidden; scroll-snap-align: start; transition: transform 0.3s; }
+        .sticker-card:hover { transform: translateY(-5px); }
+        .sticker-card img { width: 100%; height: 200px; object-fit: cover; }
+        .sticker-info { padding: 1.25rem; }
+        .sticker-title { font-weight: 600; margin-bottom: 0.5rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .sticker-price { color: #a855f7; font-weight: 700; }
+        
+        .categories { padding: 4rem 2rem; background: #0a0a0a; }
+        .cat-grid { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+        .cat-card { background: linear-gradient(135deg, #1e1e3f 0%, #0f0f0f 100%); padding: 2rem; border-radius: 16px; text-decoration: none; color: #fff; transition: all 0.3s; border: 1px solid #222; }
+        .cat-card:hover { border-color: #a855f7; transform: translateY(-3px); }
+        .cat-card h3 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+        .cat-card p { color: #666; font-size: 0.9rem; }
+        
+        footer { padding: 3rem 2rem; text-align: center; border-top: 1px solid #111; }
+        footer p { color: #444; font-size: 0.875rem; }
+        
+        @media (max-width: 768px) {
+            .proof-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .cat-grid { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>🤖 AI Ware HQ</h1>
-        <p class="tagline">Best AI Tools + Exclusive Deals = More Money in Your Pocket 💰</p>
+        <nav>
+            <a href="/" class="logo">Inkspyr<span>Studio</span></a>
+            <a href="/shop" style="color: #fff; text-decoration: none; font-weight: 500;">Shop All</a>
+        </nav>
     </header>
     
-    <nav>
-        <a href="/">Home</a>
-        <a href="/writing-tools/">Writing</a>
-        <a href="/image-tools/">Images</a>
-        <a href="/coding-tools/">Coding</a>
-        <a href="/voice-audio/">Voice</a>
-        <a href="/video-tools/">Video</a>
-        <a href="/productivity/">Productivity</a>
-        <a href="/about/">About</a>
-    </nav>
+    <section class="hero">
+        <div class="hero-content">
+            <span class="badge">✦ New Designs Just Dropped ✦</span>
+            <h1>Stick It to the Man</h1>
+            <p>Premium die-cut stickers for your laptop, water bottle, and everything in between. Made in the USA with premium vinyl.</p>
+            <div class="cta-group">
+                <a href="/shop" class="cta-primary">Shop Stickers</a>
+                <a href="#featured" class="cta-secondary">See Favorites</a>
+            </div>
+        </div>
+    </section>
     
-    <main>
-        <!-- DEALS - AFFILIATE LINKS GO HERE -->
-        <div class="deals-banner">
-            <h2>🔥 Hot Deals & Exclusive Offers</h2>
-            <p>Click to activate deals - we may earn a commission at no cost to you</p>
-            <div class="deals-grid">
-                <a href="https://appsumo.com/" class="deal-btn" target="_blank">AppSumo Deals →</a>
-                <a href="https://writesonic.com/" class="deal-btn" target="_blank">Writesonic →</a>
-                <a href="https://copy.ai/" class="deal-btn" target="_blank">Copy.ai →</a>
+    <section class="social-proof">
+        <div class="proof-grid">
+            <div class="proof-item">
+                <h3>15+</h3>
+                <p>Unique Designs</p>
+            </div>
+            <div class="proof-item">
+                <h3>500+</h3>
+                <p>Happy Customers</p>
+            </div>
+            <div class="proof-item">
+                <h3>4.9★</h3>
+                <p>Average Rating</p>
             </div>
         </div>
-        
-        <div class="hero">
-            <h2>Find Your Perfect AI Assistant</h2>
-            <p>Unbiased reviews. Real deals. We test every tool and share the best discounts.</p>
-            <a href="#categories" style="display:inline-block; background:var(--primary); color:white; padding:10px 25px; border-radius:8px; text-decoration:none; font-weight:600;">Explore Tools →</a>
+    </section>
+    
+    <section class="featured" id="featured">
+        <h2>🔥 Trending Now</h2>
+        <div class="sticker-scroll">
+            <a href="https://www.etsy.com/listing/4508456117/gotta-go-die-cut-sticker-bold-funny" target="_blank" class="sticker-card">
+                <img src="https://images.printify.com/mockup/6a0ce38e327b29583e0974e0/45742_2189/gotta-go-die-cut-sticker-bold-funny-statement.jpg" alt="GOTTA GO">
+                <div class="sticker-info">
+                    <div class="sticker-title">GOTTA GO</div>
+                    <div class="sticker-price">From $5.99</div>
+                </div>
+            </a>
+            <a href="https://www.etsy.com/listing/4508458528/monday-moods-die-cut-sticker-funny" target="_blank" class="sticker-card">
+                <img src="https://images.printify.com/mockup/6a0ce3c00e7fd2590e044f31_45742_2189/monday-moods-die-cut-sticker-funny-grumpy-face.jpg" alt="MONDAY MOODS">
+                <div class="sticker-info">
+                    <div class="sticker-title">MONDAY MOODS</div>
+                    <div class="sticker-price">From $5.99</div>
+                </div>
+            </a>
+            <a href="https://www.etsy.com/listing/4508455481/nap-time-die-cut-sticker-cute-moon-and" target="_blank" class="sticker-card">
+                <img src="https://images.printify.com/mockup/6a0ce3a6941c83b7d0086c04_45742_2189/nap-time-die-cut-sticker-cute-moon-and-stars.jpg" alt="NAP TIME">
+                <div class="sticker-info">
+                    <div class="sticker-title">NAP TIME</div>
+                    <div class="sticker-price">From $5.99</div>
+                </div>
+            </a>
+            <a href="https://www.etsy.com/listing/4508559897/do-not-disturb-die-cut-sticker" target="_blank" class="sticker-card">
+                <img src="https://images.printify.com/mockup/6a0de4391ae5d1aad303f1ec_45746_2191/do-not-disturb-die-cut-sticker.jpg" alt="DO NOT DISTURB">
+                <div class="sticker-info">
+                    <div class="sticker-title">DO NOT DISTURB</div>
+                    <div class="sticker-price">From $5.99</div>
+                </div>
+            </a>
+            <a href="https://www.etsy.com/listing/4508456429/coffee-since-3am-die-cut-sticker-bold" target="_blank" class="sticker-card">
+                <img src="https://images.printify.com/mockup/6a0cd9370e7fd2590e044875_45742_2189/coffee-since-3am-die-cut-sticker-bold-minimalist-funny-coffee-lover-gift.jpg" alt="COFFEE SINCE 3AM">
+                <div class="sticker-info">
+                    <div class="sticker-title">COFFEE SINCE 3AM</div>
+                    <div class="sticker-price">From $5.99</div>
+                </div>
+            </a>
         </div>
-        
-        <div id="categories">
-            <h3 style="margin-bottom:20px;">Browse by Category</h3>
-            <div class="categories">
-                <a href="/writing-tools/" class="category-card-link"><div class="category-card">
-                    <h3>✍️ AI Writing</h3>
-                    <p>Content creation & copywriting</p>
-                </div></a>
-                <a href="/image-tools/" class="category-card-link"><div class="category-card">
-                    <h3>🎨 AI Image Gen</h3>
-                    <p>Create images from text</p>
-                </div></a>
-                <a href="/coding-tools/" class="category-card-link"><div class="category-card">
-                    <h3>💻 AI Coding</h3>
-                    <p>Code faster with AI</p>
-                </div></a>
-                <a href="/voice-audio/" class="category-card-link"><div class="category-card">
-                    <h3>🎙️ AI Voice</h3>
-                    <p>Text-to-speech & more</p>
-                </div></a>
-                <a href="/video-tools/" class="category-card-link"><div class="category-card">
-                    <h3>📹 AI Video</h3>
-                    <p>AI video creation</p>
-                </div></a>
-                <a href="/productivity/" class="category-card-link"><div class="category-card">
-                    <h3>🧠 AI Productivity</h3>
-                    <p>Work smarter</p>
-                </div></a>
-            </div>
+    </section>
+    
+    <section class="categories">
+        <div class="cat-grid">
+            <a href="https://www.etsy.com/shop/InkspyrStudio" target="_blank" class="cat-card">
+                <h3>😂 Funny Stickers</h3>
+                <p>For the chaotic souls who need to laugh at their struggles.</p>
+            </a>
+            <a href="https://www.etsy.com/shop/InkspyrStudio" target="_blank" class="cat-card">
+                <h3>🌙 Aesthetic Vibes</h3>
+                <p>Retro, celestial, and design-forward stickers for your aesthetic.</p>
+            </a>
         </div>
-        
-        <!-- OUR PRODUCTS - DIRECT SALES -->
-        <div class="products-section">
-            <h2>📚 Our Digital Products</h2>
-            <p>Instant download - Start using today</p>
-            <div class="product-grid">
-                <div class="product-card">
-                    <h3>✨ Daily Gratitude</h3>
-                    <p>Daily gratitude journal</p>
-                    <div class="price">$2.99</div>
-                    <a href="https://buy.stripe.com/5kQ7sMgEf1yO0qt14Z2B20k" class="buy-btn">Buy Now →</a>
-                </div>
-                <div class="product-card">
-                    <h3>📅 Daily Planner</h3>
-                    <p>Printable daily planner template</p>
-                    <div class="price">$4.99</div>
-                    <a href="https://buy.stripe.com/14AdRabjV0uK1uxdRL2B202" class="buy-btn">Buy Now →</a>
-                </div>
-                <div class="product-card">
-                    <h3>💰 Budget Tracker</h3>
-                    <p>Monthly budget template</p>
-                    <div class="price">$4.99</div>
-                    <a href="https://buy.stripe.com/5kQaEY3RtgtI7SV4hb2B203" class="buy-btn">Buy Now →</a>
-                </div>
-                <div class="product-card">
-                    <h3>✅ Habit Tracker</h3>
-                    <p>30-day habit tracking template</p>
-                    <div class="price">$4.99</div>
-                    <a href="https://buy.stripe.com/aFa6oI0Fh2CS4GJbJD2B204" class="buy-btn">Buy Now →</a>
-                </div>
-                <div class="product-card">
-                    <h3>🎯 Goal Setting</h3>
-                    <p>SMART goal worksheet</p>
-                    <div class="price">$4.99</div>
-                    <a href="https://buy.stripe.com/aFacN69bNdhw1uxbJD2B205" class="buy-btn">Buy Now →</a>
-                </div>
-                <div class="product-card">
-                    <h3>📓 Gratitude Journal</h3>
-                    <p>90-day journal with daily prompts</p>
-                    <div class="price">$9.99</div>
-                    <a href="https://buy.stripe.com/28E7sMgEfa5k7SVeVP2B200" class="buy-btn">Buy Now →</a>
-                </div>
-                <div class="product-card">
-                    <h3>⬜ Dot Grid Notebook</h3>
-                    <p>100 pages premium paper</p>
-                    <div class="price">$7.99</div>
-                    <a href="https://buy.stripe.com/00w28s5ZB3GWb572932B201" class="buy-btn">Buy Now →</a>
-                </div>
-                <div class="product-card">
-                    <h3>📆 Weekly Planner</h3>
-                    <p>Plan your whole week</p>
-                    <div class="price">$4.99</div>
-                    <a href="https://buy.stripe.com/00w3cwds34L0fln00V2B206" class="buy-btn">Buy Now →</a>
-                </div>
-                <div class="product-card">
-                    <h3>🍽️ Meal Planner</h3>
-                    <p>Weekly menu + shopping list</p>
-                    <div class="price">$4.99</div>
-                    <a href="https://buy.stripe.com/14A28s73F3GWb576pj2B207" class="buy-btn">Buy Now →</a>
-                </div>
-                <div class="product-card">
-                    <h3>🎯 Focus Planner</h3>
-                    <p>Deep work session tracker</p>
-                    <div class="price">$4.99</div>
-                    <a href="https://buy.stripe.com/cNi6oIcnZ5P4ddf14Z2B208" class="buy-btn">Buy Now →</a>
-                </div>
-                <div class="product-card">
-                    <h3>📄 Invoice Template</h3>
-                    <p>Simple invoice template</p>
-                    <div class="price">$4.99</div>
-                    <a href="https://buy.stripe.com/9B65kEgEf3GWb572932B209" class="buy-btn">Buy Now →</a>
-                </div>
-                <div class="product-card">
-                    <h3>🧹 Cleaning Checklist</h3>
-                    <p>Weekly home cleaning schedule</p>
-                    <div class="price">$4.99</div>
-                    <a href="https://buy.stripe.com/dRmdRaew74L0b574hb2B20a" class="buy-btn">Buy Now →</a>
-                </div>
-                <div class="product-card">
-                    <h3>🔐 Password Tracker</h3>
-                    <p>Keep accounts secure</p>
-                    <div class="price">$4.99</div>
-                    <a href="https://buy.stripe.com/28E5kEafRdhw0qt9Bv2B20b" class="buy-btn">Buy Now →</a>
-                </div>
-                <div class="product-card">
-                    <h3>📖 Reading Log</h3>
-                    <p>Track your reading journey</p>
-                    <div class="price">$4.99</div>
-                    <a href="https://buy.stripe.com/4gM6oI1Jl7Xc6OR6pj2B20c" class="buy-btn">Buy Now →</a>
-                </div>
-                <div class="product-card">
-                    <h3>🏋️ Workout Log</h3>
-                    <p>Track your fitness</p>
-                    <div class="price">$4.99</div>
-                    <a href="https://buy.stripe.com/cNi6oIbjVfpE0qtaFz2B20d" class="buy-btn">Buy Now →</a>
-                </div>
-                <div class="product-card">
-                    <h3>😴 Sleep Tracker</h3>
-                    <p>Improve your rest</p>
-                    <div class="price">$4.99</div>
-                    <a href="https://buy.stripe.com/bJe4gA9bN91g1ux4hb2B20e" class="buy-btn">Buy Now →</a>
-                </div>
-                <div class="product-card">
-                    <h3>💧 Water Intake</h3>
-                    <p>Stay hydrated daily</p>
-                    <div class="price">$4.99</div>
-                    <a href="https://buy.stripe.com/dRmdRa9bN6T8ddf5lf2B20f" class="buy-btn">Buy Now →</a>
-                </div>
-                <div class="product-card">
-                    <h3>🎁 Gift List</h3>
-                    <p>Track gifts for occasions</p>
-                    <div class="price">$4.99</div>
-                    <a href="https://buy.stripe.com/8x2fZiafR4L08WZeVP2B20g" class="buy-btn">Buy Now →</a>
-                </div>
-                <div class="product-card">
-                    <h3>🎉 Party Planning</h3>
-                    <p>Event checklist</p>
-                    <div class="price">$4.99</div>
-                    <a href="https://buy.stripe.com/00wbJ21Jla5kgprdRL2B20h" class="buy-btn">Buy Now →</a>
-                </div>
-                <div class="product-card">
-                    <h3>🌿 Plant Care</h3>
-                    <p>Track plant health</p>
-                    <div class="price">$4.99</div>
-                    <a href="https://buy.stripe.com/dRmeVe2NpelAehj8xr2B20i" class="buy-btn">Buy Now →</a>
-                </div>
-                <div class="product-card">
-                    <h3>📊 Budget Worksheet</h3>
-                    <p>Monthly budget planner</p>
-                    <div class="price">$4.99</div>
-                    <a href="https://buy.stripe.com/3cIcN6cnZdhw0qteVP2B20j" class="buy-btn">Buy Now →</a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="affiliate-disclaimer">
-            💡 We earn commissions from links on this site at no extra cost to you.
-        </div>
-    </main>
+    </section>
     
     <footer>
-        <p>© 2026 AI Ware HQ. All rights reserved.</p>
-        <p><a href="/privacy">Privacy</a> · <a href="/terms">Terms</a></p>
+        <p>© 2026 Inkspyr Studio — <a href="https://www.etsy.com/shop/InkspyrStudio" target="_blank" style="color: #a855f7;">Shop on Etsy</a></p>
     </footer>
 </body>
 </html>
