@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All AI Tool Reviews - AIWareHQ</title>
+    <meta name="description" content="Browse all 50+ AI tool reviews. Find the best AI for writing, coding, images, video and more.">
+    <link rel="canonical" href="https://aiwarehq.com/reviews/">
+    <style>
+        :root {
+            --bg: #0d0d12;
+            --card-bg: #16161d;
+            --text: #f4f4f5;
+            --text-muted: #a1a1aa;
+            --accent: #10b981;
+            --primary: #6366f1;
+            --border: #27272a;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(13, 13, 18, 0.9);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            z-index: 100;
+            padding: 1rem 2rem;
+        }
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #fff;
+            text-decoration: none;
+        }
+        .logo span { color: var(--accent); }
+        nav { display: flex; gap: 2rem; align-items: center; }
+        nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        nav a:hover { color: var(--accent); }
+        
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 8rem 2rem 4rem;
+        }
+        .page-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .page-header h1 span { color: var(--accent); }
+        .page-header p { color: var(--text-muted); }
+        
+        /* Filters */
+        .filters {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            justify-content: center;
+        }
+        .filter-btn {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            color: var(--text-muted);
+            padding: 0.5rem 1.25rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+            text-decoration: none;
+        }
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--accent);
+            color: #000;
+            border-color: var(--accent);
+        }
+        
+        /* Review Grid */
+        .review-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 1.5rem;
+        }
+        .review-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.3s;
+            text-decoration: none;
+            color: inherit;
+        }
+        .review-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-4px);
+        }
+        .review-card .content {
+            padding: 1.5rem;
+        }
+        .review-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        .review-card p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .review-card .meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .rating { color: #fbbf24; font-weight: 600; }
+        .tag {
+            background: rgba(99, 102, 241, 0.15);
+            color: var(--primary);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+        }
+        
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 3rem 2rem;
+            text-align: center;
+            color: var(--text-muted);
+        }
+        footer a { color: var(--accent); text-decoration: none; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <a href="../index.html" class="logo">AI<span>Ware</span>HQ</a>
+            <nav>
+                <a href="../index.html#categories">Categories</a>
+                <a href="../index.html#reviews">Reviews</a>
+                <a href="../about.html">About</a>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <div class="page-header">
+            <h1>All <span>AI Tool Reviews</span></h1>
+            <p>50+ honest reviews to help you find the perfect AI tool</p>
+        </div>
+        
+        <div class="filters">
+            <a href="index.html" class="filter-btn active">All</a>
+            <a href="index.html?category=writing" class="filter-btn">Writing</a>
+            <a href="index.html?category=coding" class="filter-btn">Coding</a>
+            <a href="index.html?category=image" class="filter-btn">Image</a>
+            <a href="index.html?category=video" class="filter-btn">Video</a>
+            <a href="index.html?category=audio" class="filter-btn">Audio</a>
+            <a href="index.html?category=productivity" class="filter-btn">Productivity</a>
+        </div>
+        
+        <div class="review-grid" id="reviews-grid">
+            <!-- Reviews loaded via JS -->
+        </div>
+    </main>
+    
+    <footer>
+        <p>© 2026 AIWareHQ. All rights reserved.</p>
+        <p><a href="../privacy.html">Privacy</a> · <a href="../terms.html">Terms</a></p>
+    </footer>
+    
+    <script>
+        const reviews = [
+            { name: "ChatGPT", slug: "chatgpt", category: "writing", rating: "★★★★★", desc: "The most popular AI chatbot. Great for writing, coding, and creative tasks." },
+            { name: "Claude", slug: "claude", category: "writing", rating: "★★★★★", desc: "Anthropic's AI assistant known for thoughtful, nuanced responses." },
+            { name: "Midjourney", slug: "midjourney", category: "image", rating: "★★★★★", desc: "The king of AI art. Creates stunning images from text prompts." },
+            { name: "DALL-E 3", slug: "dalle-3", category: "image", rating: "★★★★☆", desc: "OpenAI's image generator. Great quality, integrated with ChatGPT." },
+            { name: "GitHub Copilot", slug: "github-copilot", category: "coding", rating: "★★★★☆", desc: "AI code completion that integrates with VS Code." },
+            { name: "Cursor", slug: "cursor", category: "coding", rating: "★★★★★", desc: "AI-first code editor built on VS Code." },
+            { name: "Claude Code", slug: "claude-code", category: "coding", rating: "★★★★★", desc: "CLI-focused AI coding tool for developers." },
+            { name: "Perplexity AI", slug: "perplexity", category: "research", rating: "★★★★★", desc: "AI-powered search that cites sources." },
+            { name: "Kling AI", slug: "kling-ai", category: "video", rating: "★★★★★", desc: "Hollywood-quality AI video generator." },
+            { name: "Suno AI", slug: "suno-ai", category: "audio", rating: "★★★★★", desc: "Create original music with AI." },
+            { name: "Jasper AI", slug: "jasper-ai", category: "writing", rating: "★★★★☆", desc: "Purpose-built for marketing and copy writing." },
+            { name: "Stable Diffusion", slug: "stable-diffusion", category: "image", rating: "★★★★☆", desc: "Open-source image generator. Free and self-hostable." },
+            { name: "Windsurf", slug: "windsurf", category: "coding", rating: "★★★★☆", desc: "Codeium's AI editor. Strong Cursor alternative." },
+            { name: "DeepSeek AI", slug: "deepseek-ai", category: "writing", rating: "★★★★☆", desc: "Open-source reasoning model with impressive coding." },
+            { name: "Mistral AI", slug: "mistral-ai", category: "writing", rating: "★★★★☆", desc: "European AI company with strong open-source models." },
+            { name: "Google Gemini", slug: "google-gemini", category: "writing", rating: "★★★★☆", desc: "Google's AI model with great ecosystem integration." },
+            { name: "Flux AI", slug: "flux-ai", category: "image", rating: "★★★★★", desc: "Open-source image generator rivaling Midjourney." },
+            { name: "Manus AI", slug: "manus-ai", category: "productivity", rating: "★★★★☆", desc: "Agentic AI that executes complex tasks autonomously." },
+            { name: "Runway AI", slug: "runway-ai", category: "video", rating: "★★★★☆", desc: "Professional video generation and editing." },
+            { name: "Gamma AI", slug: "gamma-ai", category: "productivity", rating: "★★★★☆", desc: "AI-powered presentation generator." },
+            { name: "Sora", slug: "sora", category: "video", rating: "★★★★☆", desc: "OpenAI's text-to-video generator." },
+            { name: "Notion AI", slug: "notion-ai", category: "productivity", rating: "★★★★☆", desc: "AI built into Notion for note-taking." },
+            { name: "Phi-4", slug: "phi-4", category: "writing", rating: "★★★★☆", desc: "Microsoft's flagship small model." },
+            { name: "Speechify", slug: "speechify", category: "audio", rating: "★★★★☆", desc: "Text-to-speech app for reading aloud." },
+            { name: "Vidu AI", slug: "vidu-ai", category: "video", rating: "★★★★☆", desc: "Chinese AI video generator." },
+        ];
+        
+        function getCategoryLabel(cat) {
+            const labels = {
+                writing: "Writing",
+                coding: "Coding",
+                image: "Image",
+                video: "Video",
+                audio: "Audio",
+                productivity: "Productivity",
+                research: "Research"
+            };
+            return labels[cat] || cat;
+        }
+        
+        function renderReviews(filter = 'all') {
+            const grid = document.getElementById('reviews-grid');
+            const filtered = filter === 'all' ? reviews : reviews.filter(r => r.category === filter);
+            
+            grid.innerHTML = filtered.map(review => `
+                <a href="${review.slug}.html" class="review-card">
+                    <div class="content">
+                        <h3>${review.name}</h3>
+                        <p>${review.desc}</p>
+                        <div class="meta">
+                            <span class="rating">${review.rating}</span>
+                            <span class="tag">${getCategoryLabel(review.category)}</span>
+                        </div>
+                    </div>
+                </a>
+            `).join('');
+        }
+        
+        // Get category from URL
+        const params = new URLSearchParams(window.location.search);
+        const category = params.get('category') || 'all';
+        
+        // Update active filter
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.classList.remove('active');
+            if (btn.getAttribute('href').includes(category)) {
+                btn.classList.add('active');
+            }
+        });
+        
+        renderReviews(category);
+    </script>
+</body>
+</html>
