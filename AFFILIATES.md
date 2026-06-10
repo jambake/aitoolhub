@@ -3,16 +3,20 @@
 ## Status: In Progress
 
 ### Applied
-- (None yet - browser unavailable)
+- (None yet - browser unstable)
 
-### Ready to Apply
+### Browser Issue
+- browserless profile tabs close too quickly to fill forms
+- user profile requires Chrome with remote debugging on Jim's machine
+- Need stable browser to complete applications
+
+### Ready to Apply (Links Verified)
 
 #### 1. WriteSonic
 - **URL:** https://affiliates.writesonic.com/signup
 - **Commission:** 20% recurring for 12 months
 - **Cookie:** 60 days
-- **Requires:** Website URL (aiwarehq.com)
-- **Note:** Form asks for promotion platform
+- **Requires:** Website URL (aiwarehq.com), email, promotion method
 
 #### 2. AppSumo
 - **URL:** https://appsumo.com/p/affiliates
@@ -28,8 +32,8 @@
 
 #### 4. Creative Fabrica
 - **URL:** https://www.creativefabrica.com/affiliates/
-- **Commission:** 15% recurring
-- **Cookie:** 30 days
+- **Commission:** 15-25%
+- **Cookie:** 30-90 days
 - **Note:** Easy approval
 
 #### 5. SkillShare
@@ -42,12 +46,9 @@
 - **Commission:** 20% recurring
 - **Cookie:** 90 days
 
-## Next Steps
-1. Browser becomes available → Fill out forms
-2. Or email applications directly to programs that accept email
-
 ## Site Info for Applications
 - **Website:** https://aiwarehq.com
 - **Description:** AI tool reviews and comparisons
 - **Traffic:** Growing (just launched)
 - **Niche:** AI tools, writing, coding, image generation
+- **Email:** jimbob@agentmail.to
