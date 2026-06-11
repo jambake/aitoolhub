@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grammarly Review - AIWareHQ</title>
+    <meta name="description" content="Grammarly review - AI-powered writing assistant for grammar, spelling, and style.">
+    <link rel="canonical" href="https://aiwarehq.com/reviews/grammarly.html">
+    <style>
+        :root {
+            --bg: #0d0d12;
+            --card-bg: #16161d;
+            --text: #f4f4f5;
+            --text-muted: #a1a1aa;
+            --accent: #10b981;
+            --primary: #6366f1;
+            --border: #27272a;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(13, 13, 18, 0.9);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            z-index: 100;
+            padding: 1rem 2rem;
+        }
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #fff;
+            text-decoration: none;
+        }
+        .logo span { color: var(--accent); }
+        nav { display: flex; gap: 2rem; align-items: center; }
+        nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        nav a:hover { color: var(--accent); }
+        
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 8rem 2rem 4rem;
+        }
+        .breadcrumb {
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+        .breadcrumb a { color: var(--accent); text-decoration: none; }
+        
+        .review-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .review-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .rating {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--card-bg);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            margin-bottom: 1rem;
+        }
+        .stars { color: #fbbf24; }
+        .rating-score { font-weight: 700; }
+        
+        .tool-image {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 16px;
+            margin: 2rem 0;
+        }
+        
+        .review-section {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        .review-section h2 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: var(--accent);
+        }
+        .review-section p {
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+        .review-section ul {
+            color: var(--text-muted);
+            padding-left: 1.5rem;
+        }
+        .review-section li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .pros-cons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        @media (max-width: 600px) {
+            .pros-cons { grid-template-columns: 1fr; }
+        }
+        
+        .pros, .cons {
+            padding: 1.5rem;
+            border-radius: 12px;
+        }
+        .pros {
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+        .cons {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+        }
+        .pros h3, .cons h3 {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+        .pros h3 { color: #10b981; }
+        .cons h3 { color: #ef4444; }
+        .pros ul, .cons ul {
+            color: var(--text-muted);
+            padding-left: 1.25rem;
+        }
+        
+        .pricing {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        .pricing-tier {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        .pricing-tier.featured {
+            border-color: var(--accent);
+        }
+        .pricing-tier h3 {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        .price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+        .price span {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            font-weight: 400;
+        }
+        
+        .cta {
+            display: block;
+            background: var(--accent);
+            color: #000;
+            text-align: center;
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            margin-top: 2rem;
+            transition: all 0.2s;
+        }
+        .cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(16, 185, 129, 0.3);
+        }
+        
+        .alternatives {
+            margin-top: 2rem;
+        }
+        .alternatives h2 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+        .alt-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        .alt-link {
+            background: var(--card-bg);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            color: var(--text);
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        .alt-link:hover {
+            background: var(--accent);
+            color: #000;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 3rem 2rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border);
+            margin-top: 4rem;
+        }
+        footer a { color: var(--accent); text-decoration: none; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <a href="/" class="logo">AI<span>Ware</span>HQ</a>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/reviews/">Reviews</a>
+                <a href="/about.html">About</a>
+                <a href="/contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <div class="breadcrumb">
+            <a href="/">Home</a> → <a href="/reviews/">Reviews</a> → Grammarly
+        </div>
+        
+        <div class="review-header">
+            <h1>Grammarly Review</h1>
+            <div class="rating">
+                <span class="stars">★★★★★</span>
+                <span class="rating-score">4.8/5</span>
+            </div>
+            <p style="color: var(--text-muted);">AI-Powered Writing Assistant</p>
+        </div>
+        
+        <div class="review-section">
+            <h2>What is Grammarly?</h2>
+            <p>Grammarly is an AI-powered writing assistant that helps you write clearer, more polished content. Founded in 2009 and now used by over 30 million people daily, it checks grammar, spelling, punctuation, clarity, engagement, and delivery across virtually every platform where you type.</p>
+            <p>Whether you're writing emails, essays, social media posts, or professional documents, Grammarly's AI analyzes your text in real-time and provides suggestions to improve your writing instantly.</p>
+        </div>
+        
+        <div class="review-section">
+            <h2>Key Features</h2>
+            <ul>
+                <li><strong>Grammar & Spelling:</strong> Catches hundreds of grammar and spelling errors</li>
+                <li><strong>Style Improvements:</strong> Suggests better word choices and sentence structures</li>
+                <li><strong>Tone Detection:</strong> Analyzes if your writing sounds formal, casual, confident, or friendly</li>
+                <li><strong>Clarity Checks:</strong> Rewrites confusing sentences for better readability</li>
+                <li><strong>Plagiarism Detector:</strong> Checks if your content is original (Premium)</li>
+                <li><strong>Browser Extension:</strong> Works across Gmail, Google Docs, Slack, and more</li>
+                <li><strong>Microsoft Office Add-in:</strong> Integrates with Word and Outlook</li>
+                <li><strong>Desktop Apps:</strong> Dedicated apps for Windows and Mac</li>
+            </ul>
+        </div>
+        
+        <div class="review-section">
+            <h2>Pricing</h2>
+            <div class="pricing">
+                <div class="pricing-tier">
+                    <h3>Free</h3>
+                    <div class="price">$0<span>/mo</span></div>
+                    <p style="margin-top: 0.5rem; font-size: 0.875rem;">Basic grammar, spelling, and punctuation checks</p>
+                </div>
+                <div class="pricing-tier featured">
+                    <h3>Premium</h3>
+                    <div class="price">$12<span>/mo</span></div>
+                    <p style="margin-top: 0.5rem; font-size: 0.875rem;">Advanced suggestions, tone adjustments, plagiarism detector</p>
+                </div>
+                <div class="pricing-tier">
+                    <h3>Business</h3>
+                    <div class="price">$15<span>/user/mo</span></div>
+                    <p style="margin-top: 0.5rem; font-size: 0.875rem;">Admin dashboard, style guides, priority support</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="review-section pros-cons">
+            <div class="pros">
+                <h3>✅ Pros</h3>
+                <ul>
+                    <li>Works everywhere you type</li>
+                    <li>Significant improvement in writing quality</li>
+                    <li>Free version is surprisingly capable</li>
+                    <li>Easy to use, no learning curve</li>
+                    <li>Great for non-native English speakers</li>
+                </ul>
+            </div>
+            <div class="cons">
+                <h3>❌ Cons</h3>
+                <ul>
+                    <li>Premium can feel expensive</li>
+                    <li>Suggestions can sometimes be overzealous</li>
+                    <li>Privacy concerns with cloud-based checking</li>
+                </ul>
+            </div>
+        </div>
+        
+        <a href="https://www.grammarly.com" target="_blank" rel="nofollow" class="cta">Try Grammarly Free →</a>
+        
+        <div class="alternatives">
+            <h2>Similar Tools</h2>
+            <div class="alt-grid">
+                <a href="chatgpt.html" class="alt-link">ChatGPT</a>
+                <a href="claude.html" class="alt-link">Claude</a>
+                <a href="jasper-ai.html" class="alt-link">Jasper</a>
+                <a href="copy-ai.html" class="alt-link">Copy.ai</a>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2026 AIWareHQ. All rights reserved.</p>
+        <nav>
+            <a href="/about.html">About</a>
+            <a href="/contact.html">Contact</a>
+            <a href="/privacy.html">Privacy</a>
+            <a href="/terms.html">Terms</a>
+        </nav>
+    </footer>
+</body>
+</html>
