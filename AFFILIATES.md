@@ -9,7 +9,9 @@
 - Status: ✅ Joined (June 10, 2026)
 
 ### Applied
-- (None yet - browser issues)
+- WriteSonic (June 12, 2026) - Website: aiwarehq.com, Focus: AI, marketing, SEO
+- AppSumo (June 13, 2026) - Applied via Impact.com, awaiting approval
+- (Browser issues - more pending)
 
 ### Ready to Apply (Browser needed)
 

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HeyGen AI Review - AI Video Generator 2026 | AIWareHQ</title>
+    <meta name="description" content="Honest HeyGen AI review. Create stunning videos with AI avatars, text-to-video, and multi-language support. Pros, cons, pricing, and alternatives.">
+    <link rel="canonical" href="https://aiwarehq.com/reviews/heygen.html">
+    <style>
+        :root {
+            --bg: #0d0d12;
+            --card-bg: #16161d;
+            --text: #f4f4f5;
+            --text-muted: #a1a1aa;
+            --accent: #10b981;
+            --accent-glow: rgba(16, 185, 129, 0.3);
+            --primary: #6366f1;
+            --border: #27272a;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(13, 13, 18, 0.9);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            z-index: 100;
+            padding: 1rem 2rem;
+        }
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #fff;
+            text-decoration: none;
+        }
+        .logo span { color: var(--accent); }
+        nav { display: flex; gap: 2rem; align-items: center; }
+        nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        nav a:hover { color: var(--accent); }
+        
+        .hero {
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+            background: radial-gradient(ellipse at top, rgba(99, 102, 241, 0.15) 0%, transparent 60%);
+        }
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+        .hero h1 span { color: var(--accent); }
+        
+        .rating {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--card-bg);
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            margin-top: 1rem;
+        }
+        .rating-stars { color: #fbbf24; }
+        .rating-score { font-weight: 700; font-size: 1.25rem; }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: var(--accent);
+            color: #000;
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px var(--accent-glow);
+        }
+        
+        .section {
+            background: var(--card-bg);
+            border-radius: 1rem;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border: 1px solid var(--border);
+        }
+        .section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--accent);
+        }
+        .section h3 {
+            font-size: 1.25rem;
+            margin: 1.5rem 0 0.5rem;
+        }
+        
+        .pros-cons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        @media (max-width: 640px) {
+            .pros-cons { grid-template-columns: 1fr; }
+        }
+        
+        .pros li, .cons li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        .pros li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+        }
+        .cons li::before {
+            content: "✗";
+            position: absolute;
+            left: 0;
+            color: #ef4444;
+        }
+        
+        .price-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .price-table th, .price-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+        .price-table th {
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+        .price-table .highlight {
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid var(--accent);
+        }
+        
+        .comparison {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .comp-card {
+            background: var(--bg);
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            text-align: center;
+        }
+        .comp-card .name {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        .comp-card .price {
+            color: var(--accent);
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        .stat {
+            background: var(--bg);
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            text-align: center;
+        }
+        .stat-num {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+        .stat-label {
+            color: var(--text-muted);
+            font-size: 0.875rem;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 3rem 2rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border);
+            margin-top: 3rem;
+        }
+        footer a { color: var(--accent); }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <a href="/" class="logo">AI<span>Ware</span>HQ</a>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/affiliates.html">Affiliates</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="hero">
+        <h1>HeyGen AI Review</h1>
+        <p>AI-Powered Video Creation Platform</p>
+        <div class="rating">
+            <span class="rating-stars">★★★★☆</span>
+            <span class="rating-score">4.5/5</span>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <h2>What is HeyGen?</h2>
+            <p>HeyGen is an AI-powered video creation platform that lets you generate professional videos from text, photos, or templates—no cameras, crew, or editing skills required. It offers AI avatars, text-to-video, video translation into 175+ languages, and more.</p>
+            
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-num">140M+</div>
+                    <div class="stat-label">Videos Generated</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-num">175+</div>
+                    <div class="stat-label">Languages</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-num">Free</div>
+                    <div class="stat-label">Trial Available</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Key Features</h2>
+            <h3>Text to Video</h3>
+            <p>Turn scripts into finished videos with AI-generated voiceovers, visuals, and avatars. Creates 1080p or 4K cinematic quality videos.</p>
+            
+            <h3>AI Avatars</h3>
+            <p>Choose from 100+ stock avatars or create your own digital twin from a short video clip. Fully customizable expressions, gestures, and clothing.</p>
+            
+            <h3>Photo to Video</h3>
+            <p>Transform any static image into a dynamic video with realistic lip-sync and natural speech timing.</p>
+            
+            <h3>AI Video Translation</h3>
+            <p>Instantly translate videos into 175+ languages while preserving the original voice's tone and lip movements.</p>
+            
+            <h3>Product Placement</h3>
+            <p>Upload product images and scripts to place products directly in avatar hands—perfect for TikTok and Instagram ads.</p>
+        </div>
+
+        <div class="section">
+            <h2>Pros & Cons</h2>
+            <div class="pros-cons">
+                <div class="pros">
+                    <h3>Pros</h3>
+                    <ul>
+                        <li>Massive language support (175+)</li>
+                        <li>Realistic AI avatars and lip-sync</li>
+                        <li>Free trial available</li>
+                        <li>No video editing skills needed</li>
+                        <li>Digital twin feature</li>
+                        <li>Fast video generation</li>
+                    </ul>
+                </div>
+                <div class="cons">
+                    <h3>Cons</h3>
+                    <ul>
+                        <li>Credit-based pricing can add up</li>
+                        <li>Some avatars look obviously AI</li>
+                        <li>Limited customization on free plan</li>
+                        <li>Video processing can be slow</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Pricing</h2>
+            <table class="price-table">
+                <tr>
+                    <th>Plan</th>
+                    <th>Price</th>
+                    <th>Features</th>
+                </tr>
+                <tr>
+                    <td>Free</td>
+                    <td>$0</td>
+                    <td>1 minute of video, 3 avatars</td>
+                </tr>
+                <tr class="highlight">
+                    <td>Creator</td>
+                    <td>$29/mo</td>
+                    <td>10 min video, unlimited avatars, priority rendering</td>
+                </tr>
+                <tr>
+                    <td>Business</td>
+                    <td>$99/mo</td>
+                    <td>90 min video, API access, team seats</td>
+                </tr>
+                <tr>
+                    <td>Enterprise</td>
+                    <td>Custom</td>
+                    <td>Unlimited, SSO, dedicated support</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>How It Compares</h2>
+            <div class="comparison">
+                <div class="comp-card">
+                    <div class="name">HeyGen</div>
+                    <div class="price">From $29/mo</div>
+                </div>
+                <div class="comp-card">
+                    <div class="name">Runway</div>
+                    <div class="price">From $15/mo</div>
+                </div>
+                <div class="comp-card">
+                    <div class="name">Pika</div>
+                    <div class="price">Free/$10/mo</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" style="text-align: center;">
+            <h2>Try HeyGen Free</h2>
+            <p style="margin-bottom: 1.5rem; color: var(--text-muted);">Create your first AI video in minutes</p>
+            <a href="https://heygen.com" target="_blank" class="cta-button">Get Started Free →</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 AIWareHQ - AI Tools Reviewed & Ranked</p>
+        <p><a href="/privacy.html">Privacy</a> | <a href="/terms.html">Terms</a></p>
+    </footer>
+</body>
+</html>
