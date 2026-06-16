@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordtune Review - AIWareHQ</title>
+    <meta name="description" content="Wordtune review: AI-powered writing companion that rewrites, summarizes, and improves your text. Free plan available.">
+    <link rel="canonical" href="https://aiwarehq.com/reviews/wordtune.html">
+    <style>
+        :root {
+            --bg: #0d0d12;
+            --card-bg: #16161d;
+            --text: #f4f4f5;
+            --text-muted: #a1a1aa;
+            --accent: #10b981;
+            --primary: #6366f1;
+            --border: #27272a;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(13, 13, 18, 0.9);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            z-index: 100;
+            padding: 1rem 2rem;
+        }
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #fff;
+            text-decoration: none;
+        }
+        .logo span { color: var(--accent); }
+        nav { display: flex; gap: 2rem; align-items: center; }
+        nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        nav a:hover { color: var(--accent); }
+        
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 8rem 2rem 4rem;
+        }
+        .review-header {
+            margin-bottom: 2rem;
+        }
+        .review-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .rating {
+            display: inline-block;
+            background: var(--card-bg);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            color: #fbbf24;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        .tag {
+            display: inline-block;
+            background: rgba(99, 102, 241, 0.15);
+            color: var(--primary);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            margin-left: 0.5rem;
+        }
+        .review-header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+        
+        .section {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        .section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--accent);
+        }
+        .section h3 {
+            font-size: 1.2rem;
+            margin: 1.5rem 0 0.5rem;
+        }
+        .section p, .section ul {
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+        .section ul {
+            padding-left: 1.5rem;
+        }
+        .section li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .pros-cons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        @media (max-width: 600px) {
+            .pros-cons { grid-template-columns: 1fr; }
+        }
+        
+        .pros, .cons {
+            padding: 1.5rem;
+            border-radius: 12px;
+        }
+        .pros {
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+        .cons {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+        }
+        .pros h3 { color: #10b981; margin-top: 0; }
+        .cons h3 { color: #ef4444; margin-top: 0; }
+        
+        .cta-button {
+            display: inline-block;
+            background: var(--accent);
+            color: #000;
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.2s;
+            margin-top: 1rem;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);
+        }
+        
+        .pricing {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        .price-card {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        .price-card.featured {
+            border-color: var(--accent);
+        }
+        .price-card .price {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text);
+        }
+        .price-card .period {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+        .price-card .plan-name {
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 3rem 2rem;
+            text-align: center;
+            color: var(--text-muted);
+        }
+        footer a { color: var(--accent); text-decoration: none; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <a href="../index.html" class="logo">AI<span>Ware</span>HQ</a>
+            <nav>
+                <a href="../index.html#categories">Categories</a>
+                <a href="../index.html#reviews">Reviews</a>
+                <a href="../about.html">About</a>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <div class="review-header">
+            <h1>Wordtune Review</h1>
+            <div>
+                <span class="rating">★★★★☆</span>
+                <span class="tag">Writing</span>
+            </div>
+            <p>AI-powered writing companion that rewrites, summarizes, and improves your text in 10 languages.</p>
+        </div>
+        
+        <div class="section">
+            <h2>What is Wordtune?</h2>
+            <p>Wordtune is an AI-powered writing assistant developed by AI21 Labs that helps you rewrite, summarize, and improve your writing. Unlike basic grammar checkers, Wordtune uses advanced language AI to understand context and offer multiple rewriting options to make your writing clearer, more engaging, and more professional.</p>
+            <p>Available as a browser extension (Chrome, Edge, Firefox), web editor, and integrations with Google Docs, Gmail, Slack, and more.</p>
+        </div>
+        
+        <div class="section">
+            <h2>Key Features</h2>
+            <ul>
+                <li><strong>Rewrite/Spin:</strong> Get 10+ alternative ways to rewrite any sentence</li>
+                <li><strong>Summarizer:</strong> Condense long documents into key points</li>
+                <li><strong>Tone Adjuster:</strong> Change tone (formal, casual, professional)</li>
+                <li><strong>Expander & Shortener:</strong> Add detail or condense text</li>
+                <li><strong>Grammar & Spelling:</strong> Built-in grammar correction</li>
+                <li><strong>Multi-language Support:</strong> Works in 10 languages</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>Pros & Cons</h2>
+            <div class="pros-cons">
+                <div class="pros">
+                    <h3>✅ Pros</h3>
+                    <ul>
+                        <li>Free plan available with decent limits</li>
+                        <li>Real-time rewriting suggestions</li>
+                        <li>Works across multiple platforms</li>
+                        <li>Multi-language support</li>
+                        <li>Easy one-click rewrites</li>
+                    </ul>
+                </div>
+                <div class="cons">
+                    <h3>❌ Cons</h3>
+                    <ul>
+                        <li>Limited daily rewrites on free plan</li>
+                        <li>Premium plans can get expensive</li>
+                        <li>Sometimes suggests awkward phrasing</li>
+                        <li>No team collaboration features</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Pricing</h2>
+            <div class="pricing">
+                <div class="price-card">
+                    <div class="plan-name">Free</div>
+                    <div class="price">$0</div>
+                    <div class="period">forever</div>
+                    <p style="margin-top: 0.5rem; font-size: 0.9rem;">10 rewrites/day, basic features</p>
+                </div>
+                <div class="price-card featured">
+                    <div class="plan-name">Premium</div>
+                    <div class="price">$9.99</div>
+                    <div class="period">/month</div>
+                    <p style="margin-top: 0.5rem; font-size: 0.9rem;">Unlimited rewrites, all features</p>
+                </div>
+                <div class="price-card">
+                    <div class="plan-name">Business</div>
+                    <div class="price">$14.99</div>
+                    <div class="period">/user/month</div>
+                    <p style="margin-top: 0.5rem; font-size: 0.9rem;">Team features, admin controls</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Verdict</h2>
+            <p><strong>Rating: 4.5/5</strong></p>
+            <p>Wordtune is an excellent writing companion for anyone who wants to improve their writing quickly. The browser extension makes it easy to use anywhere, and the rewrite suggestions are generally helpful. It's especially useful for non-native English speakers and professionals who need to write polished content regularly.</p>
+            <p>The free plan is great for casual use, but if you're writing professionally, the Premium plan is worth it for unlimited rewrites.</p>
+            <a href="https://wordtune.com/" target="_blank" rel="nofollow" class="cta-button">Try Wordtune Free</a>
+        </div>
+        
+        <p style="text-align: center; color: var(--text-muted); margin-top: 2rem;">
+            <a href="index.html">← Back to All Reviews</a>
+        </p>
+    </main>
+    
+    <footer>
+        <p>© 2026 AIWareHQ. All rights reserved.</p>
+        <p><a href="../privacy.html">Privacy</a> · <a href="../terms.html">Terms</a></p>
+    </footer>
+</body>
+</html>
