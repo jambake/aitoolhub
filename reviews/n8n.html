@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>n8n Review - AIWareHQ</title>
+    <meta name="description" content="Full review of n8n - open-source workflow automation platform. Features, pricing, pros and cons.">
+    <link rel="canonical" href="https://aiwarehq.com/reviews/n8n.html">
+    <style>
+        :root {
+            --bg: #0d0d12;
+            --card-bg: #16161d;
+            --text: #f4f4f5;
+            --text-muted: #a1a1aa;
+            --accent: #10b981;
+            --primary: #6366f1;
+            --border: #27272a;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(13, 13, 18, 0.9);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            z-index: 100;
+            padding: 1rem 2rem;
+        }
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #fff;
+            text-decoration: none;
+        }
+        .logo span { color: var(--accent); }
+        nav { display: flex; gap: 2rem; align-items: center; }
+        nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        nav a:hover { color: var(--accent); }
+        
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 8rem 2rem 4rem;
+        }
+        .back-link {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+            margin-bottom: 2rem;
+            display: inline-block;
+        }
+        .back-link:hover { text-decoration: underline; }
+        
+        .review-header {
+            margin-bottom: 2rem;
+        }
+        .review-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .rating {
+            color: #fbbf24;
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+        .tag {
+            display: inline-block;
+            background: rgba(16, 185, 129, 0.15);
+            color: var(--accent);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            margin-top: 0.5rem;
+        }
+        
+        .review-image {
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%);
+            border-radius: 16px;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+        }
+        
+        .section {
+            margin-bottom: 2.5rem;
+        }
+        .section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+        .section p {
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+        
+        .pros-cons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        .pros, .cons {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+        .pros h3, .cons h3 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+        .pros h3 { color: var(--accent); }
+        .cons h3 { color: #ef4444; }
+        .pros ul, .cons ul {
+            list-style: none;
+        }
+        .pros li, .cons li {
+            padding: 0.5rem 0;
+            color: var(--text-muted);
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        .pros li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+        }
+        .cons li::before {
+            content: "✗";
+            position: absolute;
+            left: 0;
+            color: #ef4444;
+        }
+        
+        .pricing-table {
+            background: var(--card-bg);
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            overflow: hidden;
+        }
+        .pricing-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .pricing-row:last-child {
+            border-bottom: none;
+        }
+        .pricing-row.header {
+            background: rgba(99, 102, 241, 0.1);
+            font-weight: 600;
+        }
+        .pricing-row .plan {
+            color: #fff;
+        }
+        .pricing-row .price {
+            color: var(--accent);
+            font-weight: 600;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: var(--accent);
+            color: #000;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin-top: 1rem;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);
+        }
+        
+        footer {
+            background: var(--card-bg);
+            padding: 2rem;
+            text-align: center;
+            border-top: 1px solid var(--border);
+            margin-top: 4rem;
+        }
+        footer a {
+            color: var(--text-muted);
+            text-decoration: none;
+        }
+        footer a:hover { color: var(--accent); }
+        
+        @media (max-width: 768px) {
+            .pros-cons {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <a href="/" class="logo">AI<span>Ware</span>HQ</a>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/reviews">Reviews</a>
+                <a href="/affiliates">Affiliates</a>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <a href="/reviews" class="back-link">← Back to All Reviews</a>
+        
+        <div class="review-header">
+            <h1>n8n Review</h1>
+            <div class="rating">★★★★★</div>
+            <span class="tag">Automation</span>
+        </div>
+        
+        <div class="review-image">⚙️</div>
+        
+        <div class="section">
+            <h2>What is n8n?</h2>
+            <p>n8n (pronounced "n-eight-n") is a powerful open-source workflow automation platform that lets you connect apps, automate tasks, and build complex workflows without writing code. Unlike Zapier or Make, n8n offers a self-hosted option, giving you complete control over your data and workflows.</p>
+            <p>With over 400+ integrations and a visual workflow builder, n8n is perfect for developers, businesses, and power users who want flexibility and control over their automation.</p>
+        </div>
+        
+        <div class="section">
+            <h2>Key Features</h2>
+            <p><strong>🔓 Open-Source & Self-Hosted:</strong> Run n8n on your own servers for complete data privacy and control. The community edition is free forever.</p>
+            <p><strong>🎨 Visual Workflow Builder:</strong> Drag-and-drop interface makes building complex automations simple. No coding required for basic workflows.</p>
+            <p><strong>🔗 400+ Integrations:</strong> Connect to almost any API or service - from Slack to Salesforce, GitHub to Google Sheets.</p>
+            <p><strong>🤖 AI Workflow Builder:</strong> Built-in AI capabilities for building intelligent automation with LLMs and AI agents.</p>
+            <p><strong>⚡ Webhooks & Triggers:</strong> Multiple trigger options including webhooks, schedules, and event-based triggers.</p>
+            <p><strong>🔄 Data Transformation:</strong> Powerful JSON manipulation and data transformation capabilities built-in.</p>
+        </div>
+        
+        <div class="pros-cons">
+            <div class="pros">
+                <h3>✅ Pros</h3>
+                <ul>
+                    <li>Open-source with free self-hosted option</li>
+                    <li>Complete data control (no third-party servers)</li>
+                    <li>Highly flexible and customizable</li>
+                    <li>Active community with 1000+ nodes</li>
+                    <li>One-time payment option for self-hosted</li>
+                    <li>Excellent for developers and technical users</li>
+                    <li>Custom webhook endpoints included</li>
+                </ul>
+            </div>
+            <div class="cons">
+                <h3>❌ Cons</h3>
+                <ul>
+                    <li>Steeper learning curve than Zapier</li>
+                    <li>Self-hosted requires technical knowledge</li>
+                    <li>Limited customer support for free tier</li>
+                    <li>Some features only on cloud plans</li>
+                    <li>Mobile app not as polished</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Pricing</h2>
+            <div class="pricing-table">
+                <div class="pricing-row header">
+                    <div class="plan">Plan</div>
+                    <div class="price">Price</div>
+                </div>
+                <div class="pricing-row">
+                    <div class="plan">Self-Hosted (Community)</div>
+                    <div class="price">Free</div>
+                </div>
+                <div class="pricing-row">
+                    <div class="plan">Starter (Cloud)</div>
+                    <div class="price">$20/month</div>
+                </div>
+                <div class="pricing-row">
+                    <div class="plan">Pro (Cloud)</div>
+                    <div class="price">$60/month</div>
+                </div>
+                <div class="pricing-row">
+                    <div class="plan">Business (Cloud)</div>
+                    <div class="price">$120/month</div>
+                </div>
+                <div class="pricing-row">
+                    <div class="plan">Enterprise</div>
+                    <div class="price">Custom</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Best For</h2>
+            <p>n8n is ideal for developers, tech-savvy businesses, and anyone who needs complete control over their automation. It's perfect if you want to avoid monthly subscription costs through self-hosting, or need advanced customization that Zapier doesn't offer.</p>
+            <p>Small teams and startups especially benefit from the free self-hosted option, while larger enterprises can leverage the cloud plans with dedicated support.</p>
+        </div>
+        
+        <a href="https://n8n.io" target="_blank" rel="nofollow" class="cta-button">Visit n8n →</a>
+    </main>
+    
+    <footer>
+        <p>&copy; 2026 AIWareHQ. <a href="/privacy">Privacy</a> | <a href="/terms">Terms</a></p>
+    </footer>
+</body>
+</html>
