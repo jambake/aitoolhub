@@ -108,10 +108,12 @@
             background: var(--card-bg);
             border: 1px solid var(--border);
             border-radius: 16px;
-            overflow: hidden;
+            overflow: visible;
             transition: all 0.3s;
             text-decoration: none;
             color: inherit;
+            display: block;
+            position: relative;
         }
         .review-card:hover {
             border-color: var(--accent);
@@ -145,6 +147,122 @@
             padding: 0.25rem 0.75rem;
             border-radius: 20px;
             font-size: 0.75rem;
+        }
+        
+        /* Compare Checkbox */
+        .compare-check {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            width: 32px;
+            height: 32px;
+            background: var(--border);
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-weight: 700;
+            transition: all 0.2s;
+            color: var(--text-muted);
+        }
+        .compare-check:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+        .compare-check.checked {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: #000;
+        }
+        .review-card { position: relative; }
+        
+        /* Compare Bar */
+        .compare-bar {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--card-bg);
+            border-top: 1px solid var(--border);
+            padding: 1rem 2rem;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            z-index: 200;
+        }
+        .compare-bar button {
+            background: var(--accent);
+            color: #000;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        .compare-bar button:disabled {
+            background: var(--border);
+            color: var(--text-muted);
+            cursor: not-allowed;
+        }
+        .compare-bar .clear-btn {
+            background: transparent;
+            color: var(--text-muted);
+            border: 1px solid var(--border);
+        }
+        
+        /* Compare Modal */
+        .compare-modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.8);
+            z-index: 300;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+        .compare-modal-content {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 2rem;
+            max-width: 900px;
+            width: 100%;
+            max-height: 80vh;
+            overflow: auto;
+        }
+        .compare-modal h2 {
+            margin-bottom: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .compare-modal .close {
+            background: transparent;
+            border: none;
+            color: var(--text-muted);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        .compare-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .compare-table th, .compare-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+        .compare-table th {
+            background: var(--bg);
+            font-weight: 600;
+            color: var(--accent);
+        }
+        .compare-table td:first-child {
+            font-weight: 600;
         }
         
         footer {
@@ -189,6 +307,21 @@
         </div>
     </main>
     
+    <!-- Compare Bar -->
+    <div class="compare-bar" id="compare-bar">
+        <span id="compare-count">0 selected</span>
+        <button id="compare-btn" onclick="showComparison()" disabled>Select 2-3 to compare</button>
+        <button class="clear-btn" onclick="selectedForCompare = []; updateCompareBar(); renderReviews(new URLSearchParams(window.location.search).get('category') || 'all');">Clear</button>
+    </div>
+    
+    <!-- Compare Modal -->
+    <div class="compare-modal" id="compare-modal" onclick="if(event.target === this) closeCompareModal()">
+        <div class="compare-modal-content">
+            <h2>Compare Tools <button class="close" onclick="closeCompareModal()">&times;</button></h2>
+            <div id="compare-content"></div>
+        </div>
+    </div>
+    
     <footer>
         <p>© 2026 AIWareHQ. All rights reserved.</p>
         <p><a href="../privacy.html">Privacy</a> · <a href="../terms.html">Terms</a></p>
@@ -196,57 +329,59 @@
     
     <script>
         const reviews = [
-            { name: "ChatGPT", slug: "chatgpt", category: "writing", rating: "★★★★★", desc: "The most popular AI chatbot. Great for writing, coding, and creative tasks." },
-            { name: "Claude", slug: "claude", category: "writing", rating: "★★★★★", desc: "Anthropic's AI assistant known for thoughtful, nuanced responses." },
-            { name: "Grok", slug: "grok", category: "writing", rating: "★★★★☆", desc: "xAI's witty AI assistant with real-time knowledge access and humor." },
-            { name: "Midjourney", slug: "midjourney", category: "image", rating: "★★★★★", desc: "The king of AI art. Creates stunning images from text prompts." },
-            { name: "DALL-E 3", slug: "dalle-3", category: "image", rating: "★★★★☆", desc: "OpenAI's image generator. Great quality, integrated with ChatGPT." },
-            { name: "GitHub Copilot", slug: "github-copilot", category: "coding", rating: "★★★★☆", desc: "AI code completion that integrates with VS Code." },
-            { name: "Cursor", slug: "cursor", category: "coding", rating: "★★★★★", desc: "AI-first code editor built on VS Code." },
-            { name: "Replit", slug: "replit", category: "coding", rating: "★★★★☆", desc: "AI-powered cloud IDE. Build, test, and deploy apps from your browser with AI assistance." },
-            { name: "Claude Code", slug: "claude-code", category: "coding", rating: "★★★★★", desc: "CLI-focused AI coding tool for developers." },
-            { name: "Perplexity AI", slug: "perplexity", category: "research", rating: "★★★★★", desc: "AI-powered search that cites sources." },
-            { name: "Kling AI", slug: "kling-ai", category: "video", rating: "★★★★★", desc: "Hollywood-quality AI video generator." },
-            { name: "Suno AI", slug: "suno-ai", category: "audio", rating: "★★★★★", desc: "Create original music with AI." },
-            { name: "Jasper AI", slug: "jasper-ai", category: "writing", rating: "★★★★☆", desc: "Purpose-built for marketing and copy writing." },
-            { name: "Stable Diffusion", slug: "stable-diffusion", category: "image", rating: "★★★★☆", desc: "Open-source image generator. Free and self-hostable." },
-            { name: "Windsurf", slug: "windsurf", category: "coding", rating: "★★★★☆", desc: "Codeium's AI editor. Strong Cursor alternative." },
-            { name: "DeepSeek AI", slug: "deepseek-ai", category: "writing", rating: "★★★★☆", desc: "Open-source reasoning model with impressive coding." },
-            { name: "Mistral AI", slug: "mistral-ai", category: "writing", rating: "★★★★☆", desc: "European AI company with strong open-source models." },
-            { name: "Google Gemini", slug: "google-gemini", category: "writing", rating: "★★★★☆", desc: "Google's AI model with great ecosystem integration." },
-            { name: "Flux AI", slug: "flux-ai", category: "image", rating: "★★★★★", desc: "Open-source image generator rivaling Midjourney." },
-            { name: "Manus AI", slug: "manus-ai", category: "productivity", rating: "★★★★☆", desc: "Agentic AI that executes complex tasks autonomously." },
-            { name: "Runway ML", slug: "runway", category: "video", rating: "★★★★★", desc: "AI-powered video generation and editing for creators." },
-            { name: "Gamma AI", slug: "gamma-ai", category: "productivity", rating: "★★★★☆", desc: "AI-powered presentation generator." },
-            { name: "Sora", slug: "sora", category: "video", rating: "★★★★☆", desc: "OpenAI's text-to-video generator." },
-            { name: "Notion AI", slug: "notion-ai", category: "productivity", rating: "★★★★☆", desc: "AI built into Notion for note-taking." },
-            { name: "Phi-4", slug: "phi-4", category: "writing", rating: "★★★★☆", desc: "Microsoft's flagship small model." },
-            { name: "Speechify", slug: "speechify", category: "audio", rating: "★★★★☆", desc: "Text-to-speech app for reading aloud." },
-            { name: "Vidu AI", slug: "vidu-ai", category: "video", rating: "★★★★☆", desc: "Chinese AI video generator." },
-            { name: "ElevenLabs", slug: "elevenlabs", category: "audio", rating: "★★★★★", desc: "AI voice cloning and text-to-speech platform." },
-            { name: "Pika AI", slug: "pika-ai", category: "video", rating: "★★★★☆", desc: "AI video generation from text and images. Fast, user-friendly, rising star." },
-            { name: "QuillBot", slug: "quillbot", category: "writing", rating: "★★★★☆", desc: "AI-powered paraphrasing and writing assistant with grammar checking, summarization, and citation generation." },
-            { name: "Pictory", slug: "pictory", category: "video", rating: "★★★★☆", desc: "AI video generator that turns scripts and articles into professional videos with AI voices and stock media." },
-            { name: "Haiper AI", slug: "haiper-ai", category: "video", rating: "★★★★☆", desc: "Free AI video generator with smooth motion. Great for social media content." },
-            { name: "Grammarly", slug: "grammarly", category: "writing", rating: "★★★★★", desc: "AI-powered writing assistant for grammar, spelling, and style." },
-            { name: "HeyGen", slug: "heygen", category: "video", rating: "★★★★☆", desc: "AI video creation with lifelike avatars, text-to-video, and 175+ languages." },
-            { name: "Synthesia", slug: "synthesia", category: "video", rating: "★★★★☆", desc: "AI video generation platform with 140+ avatars and 130+ languages. Create professional videos without cameras." },
-            { name: "Adobe Firefly", slug: "adobe-firefly", category: "image", rating: "★★★★☆", desc: "Adobe's AI image generator with commercial-safe licensing and Photoshop integration." },
-            { name: "Leonardo AI", slug: "leonardo-ai", category: "image", rating: "★★★★☆", desc: "AI image generator with precision control, custom model training, and community models. Great for game assets and digital art." },
-            { name: "Copy.ai", slug: "copy-ai", category: "writing", rating: "★★★★☆", desc: "AI-powered marketing copy generator. Create ads, product descriptions, and content at scale." },
-            { name: "Canva AI", slug: "canva-ai", category: "image", rating: "★★★★☆", desc: "AI-powered design platform with Magic Design, Text to Image, and instant background removal." },
-            { name: "Wordtune", slug: "wordtune", category: "writing", rating: "★★★★☆", desc: "AI-powered writing companion that rewrites, summarizes, and improves your text in 10 languages." },
-            { name: "Character AI", slug: "character-ai", category: "writing", rating: "★★★★☆", desc: "Create and chat with AI characters. Free tier available with optional Character AI+ subscription." },
-            { name: "Poe", slug: "poe", category: "productivity", rating: "★★★★☆", desc: "Quora's AI platform to chat with GPT-4, Claude, Gemini, and more. Compare AI models side-by-side." },
-            { name: "Microsoft Copilot", slug: "microsoft-copilot", category: "productivity", rating: "★★★★★", desc: "AI assistant integrated into Windows, Office, and Edge. Deep ecosystem integration with free and paid tiers." },
-            { name: "Luma AI", slug: "luma-ai", category: "image", rating: "★★★★☆", desc: "Transform photos into stunning 3D models with AI. Great for e-commerce, real estate, game assets." },
-            { name: "CapCut", slug: "capcut", category: "video", rating: "★★★★☆", desc: "Free AI-powered video editor with auto-captions, background removal, and smart effects. Perfect for creators." },
-            { name: "Descript", slug: "descript", category: "video", rating: "★★★★☆", desc: "AI-powered video and audio editor with transcription, text-based editing, and voice cloning. Edit videos like a document." },
-            { name: "Murf AI", slug: "murf-ai", category: "audio", rating: "★★★★★", desc: "Professional AI voice generator with 120+ lifelike voices in 20+ languages. Perfect for videos, podcasts, presentations." },
-            { name: "Otter.ai", slug: "otter-ai", category: "productivity", rating: "★★★★☆", desc: "AI-powered meeting notes and transcription. Real-time captions, summaries, and AI chat across all your meetings." },
-            { name: "n8n", slug: "n8n", category: "productivity", rating: "★★★★★", desc: "Open-source workflow automation platform. Connect apps, build workflows, and automate tasks with full data control." },
-            { name: "Kapwing", slug: "kapwing", category: "video", rating: "★★★★☆", desc: "AI-powered video editing platform with auto-subtitles, smart edit, and text-to-video. Great for social media content." },
+            { name: "ChatGPT", slug: "chatgpt", category: "writing", rating: 4.2, ratingStars: "★★★★☆", desc: "The most popular AI chatbot. Great for writing, coding, and creative tasks.", price: "$20/mo", bestFor: "General purpose", strength: "Versatility", weakness: "Hallucinations" },
+            { name: "Claude", slug: "claude", category: "writing", rating: 4.5, ratingStars: "★★★★½", desc: "Anthropic's AI assistant known for thoughtful, nuanced responses.", price: "$20/mo", bestFor: "Long-form analysis", strength: "Large context window", weakness: "No image generation" },
+            { name: "Grok", slug: "grok", category: "writing", rating: 3.5, ratingStars: "★★★☆☆", desc: "xAI's witty AI assistant with real-time knowledge access and humor.", price: "$16/mo", bestFor: "Fun/unique responses", strength: "Real-time data", weakness: "Still maturing" },
+            { name: "Midjourney", slug: "midjourney", category: "image", rating: 4.6, ratingStars: "★★★★☆", desc: "The king of AI art. Creates stunning images from text prompts.", price: "$10-30/mo", bestFor: "Artistic images", strength: "Image quality", weakness: "Discord required" },
+            { name: "DALL-E 3", slug: "dalle-3", category: "image", rating: 3.8, ratingStars: "★★★☆☆", desc: "OpenAI's image generator. Great quality, integrated with ChatGPT.", price: "$16/mo", bestFor: "Simple generation", strength: "Easy to use", weakness: "Limited creativity" },
+            { name: "GitHub Copilot", slug: "github-copilot", category: "coding", rating: 4.0, ratingStars: "★★★★☆", desc: "AI code completion that integrates with VS Code.", price: "$10/mo", bestFor: "Code completion", strength: "IDE integration", weakness: "Can suggest bugs" },
+            { name: "Cursor", slug: "cursor", category: "coding", rating: 4.4, ratingStars: "★★★★☆", desc: "AI-first code editor built on VS Code.", price: "$19/mo", bestFor: "AI coding", strength: "Fast iteration", weakness: "Limited customization" },
+            { name: "Replit", slug: "replit", category: "coding", rating: 3.8, ratingStars: "★★★☆☆", desc: "AI-powered cloud IDE. Build, test, and deploy from browser.", price: "$15/mo", bestFor: "Cloud development", strength: "No setup needed", weakness: "Performance limits" },
+            { name: "Claude Code", slug: "claude-code", category: "coding", rating: 4.3, ratingStars: "★★★★☆", desc: "CLI-focused AI coding tool for developers.", price: "$20/mo", bestFor: "Terminal workflows", strength: "Fast CLI", weakness: "Learning curve" },
+            { name: "Perplexity AI", slug: "perplexity", category: "research", rating: 4.0, ratingStars: "★★★★☆", desc: "AI-powered search that cites sources.", price: "$20/mo", bestFor: "Research", strength: "Cited answers", weakness: "Surface-level" },
+            { name: "Kling AI", slug: "kling-ai", category: "video", rating: 4.2, ratingStars: "★★★★☆", desc: "Hollywood-quality AI video generator.", price: "$15/mo", bestFor: "Video generation", strength: "Quality", weakness: "Credit limits" },
+            { name: "Suno AI", slug: "suno-ai", category: "audio", rating: 4.4, ratingStars: "★★★★☆", desc: "Create original music with AI.", price: "$10/mo", bestFor: "Music creation", strength: "Quality music", weakness: "Copyright concerns" },
+            { name: "Jasper AI", slug: "jasper-ai", category: "writing", rating: 3.2, ratingStars: "★★★☆☆", desc: "Purpose-built for marketing and copy writing.", price: "$49/mo", bestFor: "Marketing copy", strength: "Templates", weakness: "Overpriced" },
+            { name: "Stable Diffusion", slug: "stable-diffusion", category: "image", rating: 4.0, ratingStars: "★★★★☆", desc: "Open-source image generator. Free and self-hostable.", price: "Free", bestFor: "Self-hosting", strength: "Free/local", weakness: "Technical setup" },
+            { name: "Windsurf", slug: "windsurf", category: "coding", rating: 4.1, ratingStars: "★★★★☆", desc: "Codeium's AI editor. Strong Cursor alternative.", price: "$15/mo", bestFor: "AI coding", strength: "Good value", weakness: "Newer player" },
+            { name: "DeepSeek AI", slug: "deepseek-ai", category: "writing", rating: 3.9, ratingStars: "★★★☆☆", desc: "Open-source reasoning model with impressive coding.", price: "Free", bestFor: "Budget users", strength: "Free & powerful", weakness: "Less polished" },
+            { name: "Mistral AI", slug: "mistral-ai", category: "writing", rating: 3.5, ratingStars: "★★★☆☆", desc: "European AI company with strong open-source models.", price: "Free", bestFor: "Open-source fans", strength: "Privacy (EU)", weakness: "Smaller context" },
+            { name: "Google Gemini", slug: "google-gemini", category: "writing", rating: 3.8, ratingStars: "★★★☆☆", desc: "Google's AI model with great ecosystem integration.", price: "$20/mo", bestFor: "Google ecosystem", strength: "G Suite integration", weakness: "Inconsistent quality" },
+            { name: "Flux AI", slug: "flux-ai", category: "image", rating: 4.5, ratingStars: "★★★★☆", desc: "Open-source image generator rivaling Midjourney.", price: "Free", bestFor: "Free quality images", strength: "Quality + free", weakness: "Complex setup" },
+            { name: "Manus AI", slug: "manus-ai", category: "productivity", rating: 3.6, ratingStars: "★★★☆☆", desc: "Agentic AI that executes complex tasks autonomously.", price: "$39/mo", bestFor: "Automation", strength: "Autonomy", weakness: "Expensive" },
+            { name: "Runway ML", slug: "runway", category: "video", rating: 4.0, ratingStars: "★★★★☆", desc: "AI-powered video generation and editing for creators.", price: "$15/mo", bestFor: "Video editing", strength: "Feature-rich", weakness: "Credit system" },
+            { name: "Gamma AI", slug: "gamma-ai", category: "productivity", rating: 3.7, ratingStars: "★★★☆☆", desc: "AI-powered presentation generator.", price: "$15/mo", bestFor: "Presentations", strength: "Quick slides", weakness: "Limited design" },
+            { name: "Sora", slug: "sora", category: "video", rating: 3.5, ratingStars: "★★★☆☆", desc: "OpenAI's text-to-video generator.", price: "$20/mo", bestFor: "Video creation", strength: "Quality potential", weakness: "Limited access" },
+            { name: "Notion AI", slug: "notion-ai", category: "productivity", rating: 3.9, ratingStars: "★★★☆☆", desc: "AI built into Notion for note-taking.", price: "$10/mo", bestFor: "Notion users", strength: "Integrated", weakness: "Not standalone" },
+            { name: "Phi-4", slug: "phi-4", category: "writing", rating: 3.6, ratingStars: "★★★☆☆", desc: "Microsoft's flagship small model.", price: "Free", bestFor: "Efficient tasks", strength: "Fast & small", weakness: "Less capable" },
+            { name: "Speechify", slug: "speechify", category: "audio", rating: 3.5, ratingStars: "★★★☆☆", desc: "Text-to-speech app for reading aloud.", price: "$12/mo", bestFor: "Audiobooks", strength: "Many voices", weakness: "Robotic quality" },
+            { name: "Vidu AI", slug: "vidu-ai", category: "video", rating: 3.4, ratingStars: "★★★☆☆", desc: "Chinese AI video generator.", price: "$12/mo", bestFor: "Budget video", strength: "Affordable", weakness: "Quality varies" },
+            { name: "ElevenLabs", slug: "elevenlabs", category: "audio", rating: 4.7, ratingStars: "★★★★☆", desc: "AI voice cloning and text-to-speech platform.", price: "$5/mo", bestFor: "Voice work", strength: "Best voice quality", weakness: "Credit costs" },
+            { name: "Pika AI", slug: "pika-ai", category: "video", rating: 3.6, ratingStars: "★★★☆☆", desc: "AI video generation from text and images.", price: "$15/mo", bestFor: "Quick videos", strength: "Fast generation", weakness: "Quality limits" },
+            { name: "QuillBot", slug: "quillbot", category: "writing", rating: 3.3, ratingStars: "★★★☆☆", desc: "AI paraphrasing and writing assistant.", price: "$9.95/mo", bestFor: "Paraphrasing", strength: "Grammar tools", weakness: "Limited free tier" },
+            { name: "Pictory", slug: "pictory", category: "video", rating: 3.5, ratingStars: "★★★☆☆", desc: "AI video generator from scripts and articles.", price: "$19/mo", bestFor: "Script-to-video", strength: "Easy workflow", weakness: "Template-heavy" },
+            { name: "Haiper AI", slug: "haiper-ai", category: "video", rating: 3.2, ratingStars: "★★★☆☆", desc: "Free AI video generator with smooth motion.", price: "Free", bestFor: "Free video", strength: "No cost", weakness: "Limited quality" },
+            { name: "Grammarly", slug: "grammarly", category: "writing", rating: 4.1, ratingStars: "★★★★☆", desc: "AI-powered writing assistant for grammar and style.", price: "$12/mo", bestFor: "Grammar checking", strength: "Accurate", weakness: "Expensive premium" },
+            { name: "HeyGen", slug: "heygen", category: "video", rating: 4.2, ratingStars: "★★★★☆", desc: "AI video creation with lifelike avatars.", price: "$30/mo", bestFor: "Avatar videos", strength: "Realistic avatars", weakness: "Pricey" },
+            { name: "Synthesia", slug: "synthesia", category: "video", rating: 4.0, ratingStars: "★★★★☆", desc: "AI video generation with 140+ avatars.", price: "$30/mo", bestFor: "Corporate videos", strength: "Professional", weakness: "Expensive" },
+            { name: "Adobe Firefly", slug: "adobe-firefly", category: "image", rating: 3.9, ratingStars: "★★★☆☆", desc: "Adobe's AI image generator with commercial-safe licensing.", price: "$4.99/mo", bestFor: "Commercial use", strength: "Legal safety", weakness: "Adobe dependency" },
+            { name: "Leonardo AI", slug: "leonardo-ai", category: "image", rating: 4.3, ratingStars: "★★★★☆", desc: "AI image generator with precision control.", price: "Free", bestFor: "Game assets", strength: "Feature-rich free tier", weakness: "Busy interface" },
+            { name: "Copy.ai", slug: "copy-ai", category: "writing", rating: 3.0, ratingStars: "★★★☆☆", desc: "AI-powered marketing copy generator.", price: "$49/mo", bestFor: "Marketing", strength: "Templates", weakness: "Overpriced & generic" },
+            { name: "Canva AI", slug: "canva-ai", category: "image", rating: 3.8, ratingStars: "★★★☆☆", desc: "AI-powered design platform.", price: "$13/mo", bestFor: "Easy design", strength: "User-friendly", weakness: "Limited AI features" },
+            { name: "Wordtune", slug: "wordtune", category: "writing", rating: 3.4, ratingStars: "★★★☆☆", desc: "AI writing companion that rewrites text.", price: "$9.99/mo", bestFor: "Rewriting", strength: "Quick rewrites", weakness: "Limited depth" },
+            { name: "Character AI", slug: "character-ai", category: "writing", rating: 3.7, ratingStars: "★★★☆☆", desc: "Create and chat with AI characters.", price: "$9.99/mo", bestFor: "Fun chat", strength: "Entertainment", weakness: "Privacy concerns" },
+            { name: "Poe", slug: "poe", category: "productivity", rating: 3.8, ratingStars: "★★★☆☆", desc: "Chat with GPT-4, Claude, Gemini, and more.", price: "$20/mo", bestFor: "Model comparison", strength: "Multiple models", weakness: "Quality varies" },
+            { name: "Microsoft Copilot", slug: "microsoft-copilot", category: "productivity", rating: 3.6, ratingStars: "★★★☆☆", desc: "AI assistant integrated into Windows and Office.", price: "$20/mo", bestFor: "Windows users", strength: "System integration", weakness: "Inconsistent" },
+            { name: "Luma AI", slug: "luma-ai", category: "image", rating: 3.9, ratingStars: "★★★☆☆", desc: "Transform photos into 3D models with AI.", price: "$30/mo", bestFor: "3D modeling", strength: "3D quality", weakness: "Credit limits" },
+            { name: "CapCut", slug: "capcut", category: "video", rating: 4.3, ratingStars: "★★★★☆", desc: "Free AI-powered video editor.", price: "Free", bestFor: "Social media", strength: "Free & powerful", weakness: "Mobile-focused" },
+            { name: "Descript", slug: "descript", category: "video", rating: 4.1, ratingStars: "★★★★☆", desc: "AI-powered video and audio editor.", price: "$15/mo", bestFor: "Editing workflow", strength: "Text-based editing", weakness: "Learning curve" },
+            { name: "Murf AI", slug: "murf-ai", category: "audio", rating: 4.0, ratingStars: "★★★★☆", desc: "Professional AI voice generator with 120+ voices.", price: "$29/mo", bestFor: "Voiceovers", strength: "Voice variety", weakness: "Premium expensive" },
+            { name: "Otter.ai", slug: "otter-ai", category: "productivity", rating: 4.2, ratingStars: "★★★★☆", desc: "AI-powered meeting notes and transcription.", price: "$10/mo", bestFor: "Meetings", strength: "Live transcription", weakness: "Accuracy issues" },
+            { name: "n8n", slug: "n8n", category: "productivity", rating: 4.4, ratingStars: "★★★★☆", desc: "Open-source workflow automation platform.", price: "Free", bestFor: "Automation", strength: "Fully customizable", weakness: "Technical required" },
+            { name: "Kapwing", slug: "kapwing", category: "video", rating: 3.7, ratingStars: "★★★☆☆", desc: "AI-powered video editing platform.", price: "$16/mo", bestFor: "Quick edits", strength: "Browser-based", weakness: "Watermark on free" },
         ];
+        
+        let selectedForCompare = [];
         
         function getCategoryLabel(cat) {
             const labels = {
@@ -265,18 +400,75 @@
             const grid = document.getElementById('reviews-grid');
             const filtered = filter === 'all' ? reviews : reviews.filter(r => r.category === filter);
             
-            grid.innerHTML = filtered.map(review => `
-                <a href="${review.slug}.html" class="review-card">
-                    <div class="content">
-                        <h3>${review.name}</h3>
-                        <p>${review.desc}</p>
-                        <div class="meta">
-                            <span class="rating">${review.rating}</span>
-                            <span class="tag">${getCategoryLabel(review.category)}</span>
+            grid.innerHTML = filtered.map(review => {
+                const isSelected = selectedForCompare.includes(review.slug);
+                return `
+                    <div class="review-card" data-slug="${review.slug}">
+                        <div class="content">
+                            <div class="compare-check ${isSelected ? 'checked' : ''}" onclick="toggleCompare('${review.slug}', event)">
+                                ${isSelected ? '✓' : '+'}
+                            </div>
+                            <h3>${review.name}</h3>
+                            <p>${review.desc}</p>
+                            <div class="meta">
+                                <span class="rating">${review.ratingStars} <span style="color:var(--text-muted);font-weight:400">${review.rating}</span></span>
+                                <span class="tag">${getCategoryLabel(review.category)}</span>
+                            </div>
                         </div>
                     </div>
-                </a>
-            `).join('');
+                `;
+            }).join('');
+        }
+        
+        function toggleCompare(slug, event) {
+            event.preventDefault();
+            event.stopPropagation();
+            const idx = selectedForCompare.indexOf(slug);
+            if (idx > -1) {
+                selectedForCompare.splice(idx, 1);
+            } else if (selectedForCompare.length < 3) {
+                selectedForCompare.push(slug);
+            }
+            renderReviews(new URLSearchParams(window.location.search).get('category') || 'all');
+            updateCompareBar();
+        }
+        
+        function updateCompareBar() {
+            const bar = document.getElementById('compare-bar');
+            const btn = document.getElementById('compare-btn');
+            if (selectedForCompare.length > 0) {
+                bar.style.display = 'flex';
+                btn.disabled = selectedForCompare.length < 2;
+                btn.textContent = selectedForCompare.length < 2 ? 'Select 2-3 to compare' : `Compare ${selectedForCompare.length} tools`;
+            } else {
+                bar.style.display = 'none';
+            }
+        }
+        
+        function showComparison() {
+            const selected = reviews.filter(r => selectedForCompare.includes(r.slug));
+            const modal = document.getElementById('compare-modal');
+            const content = document.getElementById('compare-content');
+            
+            const cols = ['Name', 'Rating', 'Price', 'Best For', 'Strength', 'Weakness', 'Category'];
+            const getVal = (r, col) => {
+                if (col === 'Rating') return r.ratingStars + ' ' + r.rating;
+                return r[col.toLowerCase()] || r[col === 'Category' ? 'category' : ''] || '-';
+            };
+            
+            content.innerHTML = `
+                <table class="compare-table">
+                    <tr>${cols.map(c => `<th>${c}</th>`).join('')}</tr>
+                    ${selected.map(r => `
+                        <tr>${cols.map(c => `<td>${getVal(r, c)}</td>`).join('')}</tr>
+                    `).join('')}
+                </table>
+            `;
+            modal.style.display = 'flex';
+        }
+        
+        function closeCompareModal() {
+            document.getElementById('compare-modal').style.display = 'none';
         }
         
         // Get category from URL
