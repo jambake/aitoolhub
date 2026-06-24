@@ -108,7 +108,7 @@
             background: var(--card-bg);
             border: 1px solid var(--border);
             border-radius: 16px;
-            overflow: visible;
+            overflow: hidden;
             transition: all 0.3s;
             text-decoration: none;
             color: inherit;
@@ -403,7 +403,7 @@
             grid.innerHTML = filtered.map(review => {
                 const isSelected = selectedForCompare.includes(review.slug);
                 return `
-                    <div class="review-card" data-slug="${review.slug}">
+                    <a href="${review.slug}.html" class="review-card">
                         <div class="content">
                             <div class="compare-check ${isSelected ? 'checked' : ''}" onclick="toggleCompare('${review.slug}', event)">
                                 ${isSelected ? '✓' : '+'}
@@ -415,7 +415,7 @@
                                 <span class="tag">${getCategoryLabel(review.category)}</span>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 `;
             }).join('');
         }
