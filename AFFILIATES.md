@@ -13,6 +13,7 @@
 - AppSumo (June 13, 2026) - Applied via Impact.com, awaiting approval
 - Semrush (June 14, 2026) - Attempted, captcha protected
 - Canva (June 14, 2026) - Attempted, no public affiliate page
+- Speechify (June 30, 2026) - 30% commission, 30-day cookie - applied/awaiting
 - (More pending - browser automation limited)
 
 ### Ready to Apply (Browser needed)
