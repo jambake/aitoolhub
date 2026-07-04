@@ -14,6 +14,7 @@
 - Semrush (June 14, 2026) - Attempted, captcha protected
 - Canva (June 14, 2026) - Attempted, no public affiliate page
 - Speechify (June 30, 2026) - 30% commission, 30-day cookie - applied/awaiting
+- HeadshotPro (July 4, 2026) - 30% commission - applied/awaiting
 - (More pending - browser automation limited)
 
 ### Ready to Apply (Browser needed)
