@@ -9,12 +9,13 @@
 - Status: ✅ Joined (June 10, 2026)
 
 ### Applied
-- WriteSonic (June 12, 2026) - Website: aiwarehq.com, Focus: AI, marketing, SEO - awaiting
-- AppSumo (June 13, 2026) - Applied via Impact.com, awaiting approval
-- Semrush (June 14, 2026) - Attempted, captcha protected
-- Canva (June 14, 2026) - Attempted, no public affiliate page
-- Speechify (June 30, 2026) - 30% commission, 30-day cookie - applied/awaiting
+- Namecheap (July 5, 2026) - Domain & hosting, via Impact.com - applied/awaiting
 - HeadshotPro (July 4, 2026) - 30% commission - applied/awaiting
+- Speechify (June 30, 2026) - 30% commission, 30-day cookie - applied/awaiting
+- Canva (June 14, 2026) - Attempted, no public affiliate page
+- Semrush (June 14, 2026) - Attempted, captcha protected
+- AppSumo (June 13, 2026) - Applied via Impact.com, awaiting approval
+- WriteSonic (June 12, 2026) - Website: aiwarehq.com, Focus: AI, marketing, SEO - awaiting
 - (More pending - browser automation limited)
 
 ### Ready to Apply (Browser needed)
