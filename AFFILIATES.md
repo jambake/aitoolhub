@@ -9,6 +9,7 @@
 - Status: ✅ Joined (June 10, 2026)
 
 ### Applied
+- Kit (formerly ConvertKit) (July 9, 2026) - 50% first year commission + recurring - applied/awaiting
 - Namecheap (July 5, 2026) - Domain & hosting, via Impact.com - applied/awaiting
 - HeadshotPro (July 4, 2026) - 30% commission - applied/awaiting
 - Speechify (June 30, 2026) - 30% commission, 30-day cookie - applied/awaiting
