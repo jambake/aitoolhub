@@ -9,6 +9,7 @@
 - Status: ✅ Joined (June 10, 2026)
 
 ### Applied
+- **Copy.ai** (July 21, 2026) - 45% first year commission, 60-day cookie - applied/awaiting
 - Kit (formerly ConvertKit) (July 9, 2026) - 50% first year commission + recurring - applied/awaiting
 - Namecheap (July 5, 2026) - Domain & hosting, via Impact.com - applied/awaiting
 - HeadshotPro (July 4, 2026) - 30% commission - applied/awaiting
