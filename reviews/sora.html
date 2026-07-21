@@ -3,264 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sora Review 2026 - OpenAI's Video Generation | AIWareHQ</title>
-    <meta name="description" content="Honest Sora review 2026. Features, pricing, pros/cons, and how it compares to Kling, Runway, and other video AI tools.">
-    <link rel="canonical" href="https://aiwarehq.com/reviews/sora.html">
-    <style>
-        :root {
-            --bg: #0d0d12;
-            --card-bg: #16161d;
-            --text: #f4f4f5;
-            --text-muted: #a1a1aa;
-            --accent: #10b981;
-            --primary: #6366f1;
-            --border: #27272a;
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: var(--bg);
-            color: var(--text);
-            line-height: 1.7;
-        }
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: rgba(13, 13, 18, 0.95);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid var(--border);
-            z-index: 100;
-            padding: 1rem 2rem;
-        }
-        .header-inner {
-            max-width: 1000px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .logo { font-size: 1.25rem; font-weight: 700; color: #fff; text-decoration: none; }
-        .logo span { color: var(--accent); }
-        nav a { color: var(--text-muted); text-decoration: none; margin-left: 1.5rem; }
-        
-        main { max-width: 1000px; margin: 0 auto; padding: 6rem 2rem 4rem; }
-        
-        .breadcrumb { font-size: 0.875rem; color: var(--text-muted); margin-bottom: 1rem; }
-        .breadcrumb a { color: var(--accent); text-decoration: none; }
-        
-        h1 { font-size: 2.5rem; line-height: 1.2; margin-bottom: 0.5rem; }
-        .meta { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 2rem; }
-        
-        .hero-box {
-            background: linear-gradient(135deg, rgba(239, 68, 68, 0.2) 0%, rgba(251, 191, 36, 0.2) 100%);
-            border: 1px solid var(--border);
-            border-radius: 20px;
-            padding: 2rem;
-            margin-bottom: 3rem;
-            display: grid;
-            grid-template-columns: 1fr auto;
-            gap: 2rem;
-            align-items: center;
-        }
-        .hero-box h2 { font-size: 1.5rem; margin-bottom: 0.5rem; }
-        .hero-box p { color: var(--text-muted); }
-        .rating-large { text-align: center; }
-        .rating-large .score { font-size: 3rem; font-weight: 800; color: var(--accent); }
-        .rating-large .label { font-size: 0.875rem; color: var(--text-muted); }
-        
-        .content h2 { font-size: 1.75rem; margin: 2.5rem 0 1rem; }
-        .content p { color: var(--text-muted); margin-bottom: 1rem; }
-        .content ul { margin: 1rem 0; padding-left: 1.5rem; color: var(--text-muted); }
-        .content li { margin-bottom: 0.5rem; }
-        
-        .pros-cons {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-        .pc-box {
-            padding: 1.5rem;
-            border-radius: 12px;
-        }
-        .pc-box h3 { margin-bottom: 1rem; font-size: 1.1rem; }
-        .pc-box ul { margin: 0; }
-        .pc-box li { margin-bottom: 0.5rem; }
-        .pros { background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); }
-        .cons { background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.3); }
-        
-        .cta-box {
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 2rem;
-            text-align: center;
-            margin: 3rem 0;
-        }
-        .cta-box h3 { font-size: 1.5rem; margin-bottom: 0.5rem; }
-        .cta-box p { color: var(--text-muted); margin-bottom: 1.5rem; }
-        .cta-btn {
-            display: inline-block;
-            background: var(--accent);
-            color: #000;
-            padding: 1rem 2rem;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-        }
-        
-        .affiliate-disclosure {
-            background: rgba(251, 191, 36, 0.1);
-            border: 1px solid rgba(251, 191, 36, 0.3);
-            padding: 1rem;
-            border-radius: 8px;
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            margin-top: 2rem;
-        }
-        
-        .related {
-            margin-top: 4rem;
-            padding-top: 2rem;
-            border-top: 1px solid var(--border);
-        }
-        .related h3 { margin-bottom: 1rem; }
-        .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
-        .related-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 1.25rem;
-            text-decoration: none;
-            color: inherit;
-            transition: all 0.2s;
-        }
-        .related-card:hover { border-color: var(--accent); }
-        
-        footer {
-            border-top: 1px solid var(--border);
-            padding: 3rem 2rem;
-            text-align: center;
-            color: var(--text-muted);
-        }
-        footer a { color: var(--accent); text-decoration: none; }
-        
-        @media (max-width: 768px) {
-            .hero-box { grid-template-columns: 1fr; text-align: center; }
-            .pros-cons { grid-template-columns: 1fr; }
-            .related-grid { grid-template-columns: 1fr; }
-        }
-    </style>
+    <title>Sora Review - AI Tool Hub</title>
+    <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
     <header>
-        <div class="header-inner">
-            <a href="../index.html" class="logo">AI<span>Ware</span>HQ</a>
-            <nav>
-                <a href="../index.html">Home</a>
-                <a href="index.html">Reviews</a>
-            </nav>
-        </div>
+        <nav>
+            <div class="container">
+                <h1><a href="../index.html">🤖 AI Tool Hub</a></h1>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../reviews.html">Reviews</a></li>
+                    <li><a href="../affiliates.html">Affiliates</a></li>
+                </ul>
+            </div>
+        </nav>
     </header>
-    
-    <main>
-        <div class="breadcrumb">
-            <a href="../index.html">Home</a> / <a href="index.html">Reviews</a> / Sora
-        </div>
-        
-        <h1>Sora Review 2026</h1>
-        <p class="meta">Updated June 2026 · 7 min read</p>
-        
-        <div class="hero-box">
-            <div>
-                <h2>OpenAI's Revolutionary Video Generation</h2>
-                <p>Sora creates stunning videos from text prompts. The quality is unmatched but access is limited. <strong>Currently in early access with waitlist.</strong></p>
-            </div>
-            <div class="rating-large">
-                <div class="score">4.5</div>
-                <div class="label">/ 5.0</div>
-            </div>
-        </div>
-        
-        <div class="content">
-            <h2>What is Sora?</h2>
-            <p>Sora is OpenAI's text-to-video AI model that can generate realistic, imaginative videos from simple text descriptions. Released in early 2024, Sora represents a massive leap forward in AI video generation, capable of creating complex scenes with multiple characters, specific movements, and detailed backgrounds.</p>
-            <p>Unlike other video generation tools, Sora understands physics, spatial relationships, and temporal continuity, producing videos that feel coherent and cinematic.</p>
+
+    <main class="container">
+        <article class="review">
+            <h1>Sora</h1>
+            <div class="rating">⭐ 4.7/5.0</div>
+            <span class="category">Video Generation</span>
+            
+            <h2>Overview</h2>
+            <p>Sora is OpenAI's revolutionary text-to-video AI model that generates realistic, imaginative videos from text prompts. Capable of creating up to 1-minute videos with remarkable consistency and physical understanding, Sora represents a major breakthrough in AI video generation technology.</p>
             
             <h2>Key Features</h2>
             <ul>
-                <li><strong>Text-to-Video</strong> - Generate videos from text descriptions up to 1 minute long</li>
-                <li><strong>Image-to-Video</strong> - Animate static images into dynamic videos</li>
-                <li><strong>Video Extension</strong> - Extend existing videos with new content</li>
-                <li><strong>Loop Generation</strong> - Create seamless looping videos</li>
-                <li><strong>Advanced Physics</strong> - Realistic motion and object interactions</li>
-                <li><strong>Multiple Aspect Ratios</strong> - Support for landscape, portrait, and square</li>
+                <li><strong>Text-to-Video:</strong> Generate complex videos from detailed text descriptions</li>
+                <li><strong>Image-to-Video:</strong> Animate static images into dynamic videos</li>
+                <li><strong>Video Extensions:</strong> Extend existing videos forward or backward in time</li>
+                <li><strong>Consistent Characters:</strong> Maintain character consistency across scenes</li>
+                <li><strong>Physics Simulation:</strong> Understand and simulate realistic physical interactions</li>
+                <li><strong>High Resolution:</strong> Generate videos up to 1920x1080 resolution</li>
+            </ul>
+            
+            <h2>Pros</h2>
+            <ul>
+                <li>Exceptional video quality with realistic motion and physics</li>
+                <li>Handles complex, multi-character scenes remarkably well</li>
+                <li>Strong understanding of visual world physics and causality</li>
+                <li>Backed by OpenAI's research and development resources</li>
+                <li>Continuous improvements and feature additions</li>
+                <li>Excellent for creative storytelling and concept visualization</li>
+            </ul>
+            
+            <h2>Cons</h2>
+            <ul>
+                <li>Currently limited access - not publicly available</li>
+                <li>Can struggle with precise temporal consistency in longer videos</li>
+                <li>May generate unrealistic content that needs careful review</li>
+                <li>Pricing details still evolving as platform matures</li>
             </ul>
             
             <h2>Pricing</h2>
-            <ul>
-                <li><strong>Free</strong> - Very limited access, long waitlist</li>
-                <li><strong>Sora Turbo</strong> - $20/month with ChatGPT Plus - More generations</li>
-                <li><strong>Pay-as-you-go</strong> - Coming soon for heavier users</li>
-            </ul>
-        </div>
-        
-        <div class="pros-cons">
-            <div class="pc-box pros">
-                <h3>✅ Pros</h3>
-                <ul>
-                    <li>Exceptional video quality</li>
-                    <li>Excellent physics understanding</li>
-                    <li>Creative and cinematic outputs</li>
-                    <li>Multiple generation modes</li>
-                    <li>Backed by OpenAI</li>
-                </ul>
+            <p>Sora is currently available through OpenAI's API with tiered pricing. The free tier offers limited generations, while paid plans provide more generations and higher resolution options. Check OpenAI's pricing page for current rates.</p>
+            
+            <h2>Best For</h2>
+            <p>Filmmakers, content creators, marketers, and creative professionals looking to generate high-quality video content from text. Ideal for concept visualization, short films, advertising, and creative projects.</p>
+            
+            <div class="cta">
+                <a href="https://sora.openai.com" target="_blank" class="button">Try Sora</a>
             </div>
-            <div class="pc-box cons">
-                <h3>❌ Cons</h3>
-                <ul>
-                    <li>Limited access, waitlist required</li>
-                    <li>Monthly generation limits</li>
-                    <li>Can struggle with complex scenes</li>
-                    <li>Ethical concerns about deepfakes</li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="cta-box">
-            <h3>Try Sora</h3>
-            <p>Join the waitlist or access via ChatGPT Plus subscription.</p>
-            <a href="https://sora.com" target="_blank" rel="nofollow" class="cta-btn">Visit Sora →</a>
-        </div>
-        
-        <div class="affiliate-disclosure">
-            <strong>Disclosure:</strong> AIWareHQ is a participant in affiliate programs. We may earn a commission when you click links and make purchases.
-        </div>
-        
-        <div class="related">
-            <h3>Related Reviews</h3>
-            <div class="related-grid">
-                <a href="kling-ai.html" class="related-card">
-                    <strong>Kling AI</strong>
-                    <p style="font-size:0.85rem;color:var(--text-muted);margin-top:0.25rem">Chinese video AI</p>
-                </a>
-                <a href="runway.html" class="related-card">
-                    <strong>Runway</strong>
-                    <p style="font-size:0.85rem;color:var(--text-muted);margin-top:0.25rem">Creative video suite</p>
-                </a>
-                <a href="chatgpt.html" class="related-card">
-                    <strong>ChatGPT</strong>
-                    <p style="font-size:0.85rem;color:var(--text-muted);margin-top:0.25rem">OpenAI's chatbot</p>
-                </a>
-            </div>
-        </div>
+        </article>
     </main>
-    
+
     <footer>
-        <p>© 2026 AIWareHQ. All rights reserved.</p>
-        <p><a href="../privacy.html">Privacy</a> · <a href="../terms.html">Terms</a></p>
+        <div class="container">
+            <p>© 2026 AI Tool Hub. All rights reserved.</p>
+        </div>
     </footer>
 </body>
 </html>
