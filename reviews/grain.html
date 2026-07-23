@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grain AI Review 2026 - AI Meeting Notes & Knowledge Capture</title>
+    <meta name="description" content="Grain AI review 2026 - AI-powered meeting notes that capture insights automatically. Features, pricing, pros/cons, and alternatives.">
+    <link rel="canonical" href="https://aiwarehq.com/reviews/grain.html">
+    <style>
+        :root {
+            --bg: #0d0d12;
+            --card-bg: #16161d;
+            --text: #f4f4f5;
+            --text-muted: #a1a1aa;
+            --accent: #10b981;
+            --primary: #6366f1;
+            --border: #27272a;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+        a { color: var(--accent); }
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(13, 13, 18, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            z-index: 100;
+            padding: 1rem 2rem;
+        }
+        .header-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #fff;
+            text-decoration: none;
+        }
+        .logo span { color: var(--accent); }
+        nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            margin-left: 1.5rem;
+            font-weight: 500;
+        }
+        nav a:hover { color: var(--accent); }
+        main {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 6rem 2rem 4rem;
+        }
+        .breadcrumb {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+        .breadcrumb a { color: var(--accent); text-decoration: none; }
+        h1 {
+            font-size: 2.5rem;
+            line-height: 1.2;
+            margin-bottom: 0.5rem;
+        }
+        .tagline {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+        .meta {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        .rating {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--card-bg);
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            border: 1px solid var(--border);
+        }
+        .rating-score {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+        .category {
+            background: var(--primary);
+            color: #fff;
+            padding: 0.4rem 1rem;
+            border-radius: 2rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+        .hero-box {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.2) 0%, rgba(16, 185, 129, 0.2) 100%);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 3rem;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 2rem;
+            align-items: center;
+        }
+        .hero-box h2 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .hero-box p {
+            color: var(--text-muted);
+        }
+        .rating-large {
+            text-align: center;
+        }
+        .rating-large .score {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--accent);
+        }
+        .rating-large .label {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+        .content h2 {
+            font-size: 1.75rem;
+            margin: 2.5rem 0 1rem;
+        }
+        .content p {
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        .feature {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+        .feature h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: #fff;
+        }
+        .feature p {
+            font-size: 0.9rem;
+            margin: 0;
+        }
+        .pros-cons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .pros, .cons {
+            padding: 1.5rem;
+            border-radius: 12px;
+        }
+        .pros {
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+        .cons {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+        }
+        .pros h3, .cons h3 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+        .pros h3 { color: var(--accent); }
+        .cons h3 { color: #ef4444; }
+        .pros li, .cons li {
+            margin: 0.5rem 0;
+            color: var(--text-muted);
+        }
+        .pricing {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            margin: 2rem 0;
+        }
+        .pricing h3 {
+            margin-bottom: 1rem;
+        }
+        .price {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+        .price-note {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+        .cta-button {
+            display: inline-block;
+            background: var(--accent);
+            color: #000;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 1rem;
+            transition: transform 0.2s;
+        }
+        .cta-button:hover {
+            transform: scale(1.05);
+        }
+        .alternatives {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            margin: 2rem 0;
+        }
+        .alternatives ul {
+            list-style: none;
+            padding: 0;
+        }
+        .alternatives li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+        .alternatives li:last-child {
+            border-bottom: none;
+        }
+        .disclosure {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border);
+        }
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 3rem 2rem;
+            text-align: center;
+            color: var(--text-muted);
+            margin-top: 4rem;
+        }
+        @media (max-width: 768px) {
+            .hero-box {
+                grid-template-columns: 1fr;
+            }
+            .pros-cons {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <a href="../index.html" class="logo">AI<span>Ware</span>HQ</a>
+            <nav>
+                <a href="../index.html">Home</a>
+                <a href="index.html">Reviews</a>
+                <a href="../affiliates.html">Affiliates</a>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <div class="breadcrumb">
+            <a href="index.html">← All Reviews</a> / Productivity
+        </div>
+        
+        <h1>Grain AI Review</h1>
+        <p class="tagline">AI-Powered Meeting Notes That Capture Insights Automatically</p>
+        
+        <div class="meta">
+            <div class="rating">
+                <span class="rating-score">4.5/5.0</span>
+                <span>★★★★☆</span>
+            </div>
+            <span class="category">Productivity</span>
+        </div>
+        
+        <div class="hero-box">
+            <div>
+                <h2>Capture Every Insight</h2>
+                <p>Grain AI automatically captures and summarizes meeting insights, enabling teams to focus on conversations instead of note-taking.</p>
+                <a href="https://grain.com" target="_blank" rel="nofollow" class="cta-button">Visit Grain AI →</a>
+            </div>
+            <div class="rating-large">
+                <div class="score">4.5</div>
+                <div class="label">out of 5.0</div>
+            </div>
+        </div>
+        
+        <div class="content">
+            <h2>What is Grain AI?</h2>
+            <p>Grain is an AI-powered meeting notes tool that automatically captures, organizes, and summarizes insights from your meetings. It integrates with popular video conferencing platforms to provide real-time transcription and AI-generated summaries, making it effortless to capture important decisions, action items, and customer feedback.</p>
+            
+            <h2>Key Features</h2>
+            <div class="features">
+                <div class="feature">
+                    <h3>🎙️ Auto Transcription</h3>
+                    <p>Real-time transcription of meetings with high accuracy across multiple speakers.</p>
+                </div>
+                <div class="feature">
+                    <h3>📝 Smart Summaries</h3>
+                    <p>AI-generated summaries that highlight key points, decisions, and action items.</p>
+                </div>
+                <div class="feature">
+                    <h3>🔗 Integrations</h3>
+                    <p>Seamless integration with Slack, Salesforce, Notion, and 50+ other tools.</p>
+                </div>
+                <div class="feature">
+                    <h3>🏷️ Auto Tags & Highlights</h3>
+                    <p>Automatically tags and highlights important moments, customer feedback, and decisions.</p>
+                </div>
+                <div class="feature">
+                    <h3>🔍 Search & Discovery</h3>
+                    <p>Search across all past meetings to find specific conversations and insights instantly.</p>
+                </div>
+                <div class="feature">
+                    <h3>📤 Shareable Clips</h3>
+                    <p>Extract and share specific video clips with timestamps for easy sharing.</p>
+                </div>
+            </div>
+            
+            <h2>Pricing</h2>
+            <div class="pricing">
+                <h3>Free Plan</h3>
+                <p class="price">$0</p>
+                <p class="price-note">Up to 3 meetings per month, basic transcription</p>
+                
+                <h3>Pro Plan</h3>
+                <p class="price">$16</p>
+                <p class="price-note">per user/month (billed annually) - Unlimited meetings, advanced features</p>
+                
+                <h3>Team Plan</h3>
+                <p class="price">$20</p>
+                <p class="price-note">per user/month - Team collaboration, admin controls, analytics</p>
+            </div>
+            
+            <h2>Pros & Cons</h2>
+            <div class="pros-cons">
+                <div class="pros">
+                    <h3>✅ Pros</h3>
+                    <ul>
+                        <li>Excellent transcription accuracy</li>
+                        <li>Seamless integration with popular tools</li>
+                        <li>Time-saving auto summaries</li>
+                        <li>Easy sharing and collaboration</li>
+                        <li>Helpful for customer success teams</li>
+                    </ul>
+                </div>
+                <div class="cons">
+                    <h3>❌ Cons</h3>
+                    <ul>
+                        <li>Credit-based pricing can be limiting</li>
+                        <li>Some features require higher tiers</li>
+                        <li>May not work with all video platforms</li>
+                        <li>Privacy concerns for sensitive meetings</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <h2>Best For</h2>
+            <ul>
+                <li><strong>Customer Success Teams</strong> - Capture customer feedback and track action items</li>
+                <li><strong>Sales Teams</strong> - Automatically document sales calls and discovery conversations</li>
+                <li><strong>Remote Teams</strong> - Keep everyone aligned without manual note-taking</li>
+                <li><strong>Project Managers</strong> - Track decisions and action items across multiple meetings</li>
+            </ul>
+            
+            <h2>Alternatives</h2>
+            <div class="alternatives">
+                <ul>
+                    <li><a href="otter-ai.html">Otter.ai</a> - Another popular AI meeting notes tool with similar features</li>
+                    <li><a href="shortwave.html">Shortwave</a> - AI-powered email client with meeting assistance</li>
+                    <li><a href="notebooklm.html">Google NotebookLM</a> - AI research assistant for notes and documents</li>
+                </ul>
+            </div>
+            
+            <h2>Conclusion</h2>
+            <p>Grain AI is an excellent tool for teams looking to capture and leverage meeting insights without the burden of manual note-taking. Its strong transcription accuracy, smart summaries, and extensive integrations make it a valuable asset for customer-facing teams. While the pricing structure may not suit everyone, the time saved and improved team alignment often justify the investment.</p>
+            
+            <p class="disclosure">This review contains affiliate links. We may earn a commission at no extra cost to you when you sign up through our links.</p>
+        </div>
+    </main>
+    
+    <footer>
+        <p>© 2026 AIWareHQ. All rights reserved.</p>
+        <p><a href="../privacy.html">Privacy</a> · <a href="../terms.html">Terms</a></p>
+    </footer>
+</body>
+</html>
