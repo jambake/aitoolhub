@@ -23,18 +23,25 @@
 
 ### Ready to Apply (Browser needed)
 
-#### 1. WriteSonic
+### Ready to Apply (Browser needed)
+
+#### 1. Simplified
+- **URL:** https://affiliate.simplified.com/signup/10701
+- **Commission:** 40% recurring (lifetime)
+- **Note:** Signup form requires browser automation (July 24, 2026) - identified, form requires submission
+
+#### 2. WriteSonic
 - **URL:** https://affiliates.writesonic.com/signup
 - **Commission:** 20% recurring for 12 months
 
-#### 2. AppSumo
+#### 3. AppSumo
 - **URL:** https://appsumo.com/p/affiliates
 - **Commission:** $200 CPA + $10/lead
 
-#### 3. Amazon Associates
+#### 4. Amazon Associates
 - **URL:** https://affiliate-program.amazon.com
 
-#### 4. Creative Fabrica
+#### 5. Creative Fabrica
 - **URL:** https://www.creativefabrica.com/affiliates/
 
 ## Site Info for Applications
