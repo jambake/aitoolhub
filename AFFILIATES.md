@@ -43,6 +43,7 @@
 
 #### 5. Creative Fabrica
 - **URL:** https://www.creativefabrica.com/affiliates/
+- **Attempted:** July 25, 2026 - Blocked (403 Forbidden)
 
 ## Site Info for Applications
 - **Website:** https://aiwarehq.com
