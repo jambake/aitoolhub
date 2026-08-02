@@ -9,7 +9,9 @@
 - Status: ✅ Joined (June 10, 2026)
 
 ### Applied
+- **Amazon Associates** (August 2, 2026) - Up to 10% commission on Amazon products - applied/awaiting
 - **Systeme.io** (July 22, 2026) - All-in-one marketing, 50% recurring - applied/awaiting
+- **Narrato** (August 2, 2026) - 30% commission - Attempted, domain now redirects to Typeface.ai (acquired?)
 - **Copy.ai** (July 21, 2026) - 45% first year commission, 60-day cookie - applied/awaiting
 - Kit (formerly ConvertKit) (July 9, 2026) - 50% first year commission + recurring - applied/awaiting
 - Namecheap (July 5, 2026) - Domain & hosting, via Impact.com - applied/awaiting
