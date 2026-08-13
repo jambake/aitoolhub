@@ -32,6 +32,11 @@
 - **Commission:** 40% recurring (lifetime)
 - **Note:** Signup form requires browser automation (July 24, 2026) - identified, form requires submission
 
+#### 2. Descript
+- **URL:** https://www.descript.com/affiliates
+- **Commission:** 30% recurring for 2 years
+- **Note:** Identified August 13, 2026 - browser needed
+
 #### 2. WriteSonic
 - **URL:** https://affiliates.writesonic.com/signup
 - **Commission:** 20% recurring for 12 months
