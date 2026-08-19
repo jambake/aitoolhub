@@ -9,6 +9,7 @@
 - Status: ✅ Joined (June 10, 2026)
 
 ### Applied
+- **Notion** (August 19, 2026) - 20% year one revenue + $50 per signup, via PartnerStack - APPLYING NOW
 - **Amazon Associates** (August 2, 2026) - Up to 10% commission on Amazon products - applied/awaiting
 - **Systeme.io** (July 22, 2026) - All-in-one marketing, 50% recurring - applied/awaiting
 - **Narrato** (August 2, 2026) - 30% commission - Attempted, domain now redirects to Typeface.ai (acquired?)
@@ -22,8 +23,6 @@
 - AppSumo (June 13, 2026) - Applied via Impact.com, awaiting approval
 - WriteSonic (June 12, 2026) - Website: aiwarehq.com, Focus: AI, marketing, SEO - awaiting
 - (More pending - browser automation limited)
-
-### Ready to Apply (Browser needed)
 
 ### Ready to Apply (Browser needed)
 
