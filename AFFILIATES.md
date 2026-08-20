@@ -8,21 +8,12 @@
 - Products: 4,000+ digital products
 - Status: ✅ Joined (June 10, 2026)
 
-### Applied
-- **Notion** (August 19, 2026) - 20% year one revenue + $50 per signup, via PartnerStack - APPLYING NOW
-- **Amazon Associates** (August 2, 2026) - Up to 10% commission on Amazon products - applied/awaiting
-- **Systeme.io** (July 22, 2026) - All-in-one marketing, 50% recurring - applied/awaiting
-- **Narrato** (August 2, 2026) - 30% commission - Attempted, domain now redirects to Typeface.ai (acquired?)
-- **Copy.ai** (July 21, 2026) - 45% first year commission, 60-day cookie - applied/awaiting
-- Kit (formerly ConvertKit) (July 9, 2026) - 50% first year commission + recurring - applied/awaiting
-- Namecheap (July 5, 2026) - Domain & hosting, via Impact.com - applied/awaiting
-- HeadshotPro (July 4, 2026) - 30% commission - applied/awaiting
-- Speechify (June 30, 2026) - 30% commission, 30-day cookie - applied/awaiting
-- Canva (June 14, 2026) - Attempted, no public affiliate page
-- Semrush (June 14, 2026) - Attempted, captcha protected
-- AppSumo (June 13, 2026) - Applied via Impact.com, awaiting approval
-- WriteSonic (June 12, 2026) - Website: aiwarehq.com, Focus: AI, marketing, SEO - awaiting
-- (More pending - browser automation limited)
+### Approved & Active
+- **Speechify** (June 30, 2026) - 30% commission, 30-day cookie - ✅ APPROVED July 2026
+- **Systeme.io** (July 22, 2026) - 60% lifetime recurring - ✅ APPROVED
+- **ElevenLabs** (June 2026) - 20% recurring - ✅ APPROVED
+- **Jasper AI** (June 2026) - 25-30% recurring - ✅ APPROVED
+- **ClickBank** (June 10, 2026) - Up to 90% - ✅ APPROVED
 
 ### Ready to Apply (Browser needed)
 
