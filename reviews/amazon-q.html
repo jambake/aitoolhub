@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Q Review 2026 - AWS AI Assistant for Dev & Business | AIWareHQ</title>
+    <meta name="description" content="Honest Amazon Q review 2026. Features, pricing, pros/cons, and how it compares to GitHub Copilot, Cursor, and other AI coding assistants.">
+    <link rel="canonical" href="https://aiwarehq.com/reviews/amazon-q.html">
+    <style>
+        :root {
+            --bg: #0d0d12;
+            --card-bg: #16161d;
+            --text: #f4f4f5;
+            --text-muted: #a1a1aa;
+            --accent: #10b981;
+            --primary: #ff9900;
+            --border: #27272a;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(13, 13, 18, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            z-index: 100;
+            padding: 1rem 2rem;
+        }
+        .header-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo { font-size: 1.25rem; font-weight: 700; color: #fff; text-decoration: none; }
+        .logo span { color: var(--accent); }
+        nav a { color: var(--text-muted); text-decoration: none; margin-left: 1.5rem; }
+        
+        main { max-width: 1000px; margin: 0 auto; padding: 6rem 2rem 4rem; }
+        
+        .breadcrumb { font-size: 0.875rem; color: var(--text-muted); margin-bottom: 1rem; }
+        .breadcrumb a { color: var(--accent); text-decoration: none; }
+        
+        h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 0.5rem; line-height: 1.2; }
+        .subtitle { font-size: 1.25rem; color: var(--text-muted); margin-bottom: 2rem; }
+        
+        .rating-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--card-bg);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            border: 1px solid var(--border);
+        }
+        .rating-badge .score { font-size: 1.5rem; font-weight: 700; color: var(--accent); }
+        .rating-badge .label { color: var(--text-muted); }
+        
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .stat-card {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+        .stat-card .label { font-size: 0.875rem; color: var(--text-muted); }
+        .stat-card .value { font-size: 1.5rem; font-weight: 700; margin-top: 0.25rem; }
+        
+        .content-section { margin-bottom: 2.5rem; }
+        h2 { font-size: 1.5rem; margin-bottom: 1rem; color: #fff; }
+        h3 { font-size: 1.25rem; margin-bottom: 0.75rem; color: #fff; margin-top: 1.5rem; }
+        p { margin-bottom: 1rem; color: var(--text-muted); }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .feature-card {
+            background: var(--card-bg);
+            padding: 1.25rem;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+        }
+        .feature-card h4 { color: #fff; margin-bottom: 0.5rem; font-size: 1rem; }
+        .feature-card p { font-size: 0.9rem; margin-bottom: 0; }
+        
+        .pros-cons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        @media (max-width: 768px) { .pros-cons { grid-template-columns: 1fr; } }
+        
+        .list-card {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+        .list-card h3 { margin-top: 0; color: #fff; }
+        .list-card ul { list-style: none; }
+        .list-card li { padding: 0.5rem 0; border-bottom: 1px solid var(--border); color: var(--text-muted); }
+        .list-card li:last-child { border-bottom: none; }
+        .list-card .positive { color: var(--accent); }
+        .list-card .negative { color: #ef4444; }
+        
+        .cta-button {
+            display: inline-block;
+            background: var(--primary);
+            color: #000;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 1rem;
+            transition: opacity 0.2s;
+        }
+        .cta-button:hover { opacity: 0.9; }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+        }
+        .comparison-table th, .comparison-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+        .comparison-table th { background: var(--card-bg); color: #fff; }
+        .comparison-table td { color: var(--text-muted); }
+        
+        footer {
+            background: var(--card-bg);
+            padding: 2rem;
+            text-align: center;
+            margin-top: 4rem;
+            border-top: 1px solid var(--border);
+        }
+        footer a { color: var(--accent); text-decoration: none; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <a href="/" class="logo">AI<span>Ware</span>HQ</a>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/reviews/">Reviews</a>
+                <a href="/affiliates.html">Affiliate Programs</a>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <div class="breadcrumb">
+            <a href="/">Home</a> › <a href="/reviews/">Reviews</a> › Amazon Q
+        </div>
+        
+        <h1>Amazon Q Review 2026</h1>
+        <p class="subtitle">AWS's AI Assistant for Developers and Business Users</p>
+        
+        <div class="rating-badge">
+            <span class="score">4.6</span>
+            <span class="label">/ 5.0</span>
+        </div>
+        
+        <div class="hero-stats">
+            <div class="stat-card">
+                <div class="label">Category</div>
+                <div class="value">AI Coding & Assistant</div>
+            </div>
+            <div class="stat-card">
+                <div class="label">Free Tier</div>
+                <div class="value">Yes</div>
+            </div>
+            <div class="stat-card">
+                <div class="label">Starting Price</div>
+                <div class="value">$19/user/mo</div>
+            </div>
+            <div class="stat-card">
+                <div class="label">Best For</div>
+                <div class="value">AWS Developers</div>
+            </div>
+        </div>
+        
+        <div class="content-section">
+            <h2>What is Amazon Q?</h2>
+            <p>Amazon Q is Amazon's AI-powered assistant designed for both developers and business users. Built on Amazon Bedrock, it leverages multiple foundation models to handle a wide range of tasks—from coding and debugging to business intelligence and customer service automation.</p>
+            <p>The tool comes in two main flavors: <strong>Amazon Q Developer</strong> for software development teams, and <strong>Amazon Q Business</strong> for enterprise-wide knowledge management and workflow automation.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2>Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h4>Intelligent Code Generation</h4>
+                    <p>Generate, complete, and refactor code across 50+ programming languages with context-aware suggestions.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Code Transformation</h4>
+                    <p>Automatically upgrade legacy code, migrate between languages, and apply security patches at scale.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Security Scanning</h4>
+                    <p>Built-in security vulnerability detection and remediation recommendations during coding.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>AWS Integration</h4>
+                    <p>Deep integration with AWS services—EC2, S3, Lambda, and more. Query and manage cloud resources conversationally.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Enterprise Knowledge Base</h4>
+                    <p>Connect to company data sources (SharePoint, Slack, Salesforce) for contextual business answers.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>IDP-Ready</h4>
+                    <p>Enterprise-grade identity and access management with built-in data privacy controls and IP indemnity.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="content-section">
+            <h2>Pricing</h2>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Plan</th>
+                        <th>Price</th>
+                        <th>Features</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Developer Free</td>
+                        <td>Free</td>
+                        <td>Basic code completion, 90 days of chat history, 2 agentic requests/month</td>
+                    </tr>
+                    <tr>
+                        <td>Developer Pro</td>
+                        <td>$19/user/month</td>
+                        <td>1,000 agentic requests/month, 4,000 lines code transformation, full security scanning</td>
+                    </tr>
+                    <tr>
+                        <td>Business</td>
+                        <td>Custom pricing</td>
+                        <td>Enterprise knowledge base, 3rd party integrations, admin controls</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="pros-cons">
+            <div class="list-card">
+                <h3>✅ Pros</h3>
+                <ul>
+                    <li class="positive">Excellent AWS ecosystem integration</li>
+                    <li class="positive">Strong free tier for individuals</li>
+                    <li class="positive">Enterprise-grade security and compliance</li>
+                    <li class="positive">Code transformation capabilities are unique</li>
+                    <li class="positive">IP indemnification included</li>
+                </ul>
+            </div>
+            <div class="list-card">
+                <h3>❌ Cons</h3>
+                <li class="negative">Less flexible than Copilot/Cursor for non-AWS workflows</li>
+                <li class="negative">Pro plan limits may feel restrictive</li>
+                <li class="negative">Steeper learning curve for non-AWS developers</li>
+                <li class="negative">Business pricing requires sales contact</li>
+                <li class="negative">Limited IDE support compared to competitors</li>
+            </div>
+        </div>
+        
+        <div class="content-section">
+            <h2>How It Compares</h2>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Tool</th>
+                        <th>Rating</th>
+                        <th>Price</th>
+                        <th>Best For</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Amazon Q</strong></td>
+                        <td>4.6/5</td>
+                        <td>$19/mo</td>
+                        <td>AWS teams</td>
+                    </tr>
+                    <tr>
+                        <td>GitHub Copilot</td>
+                        <td>4.7/5</td>
+                        <td>$10-20/mo</td>
+                        <td>General coding</td>
+                    </tr>
+                    <tr>
+                        <td>Cursor</td>
+                        <td>4.8/5</td>
+                        <td>$19-39/mo</td>
+                        <td>AI-first editing</td>
+                    </tr>
+                    <tr>
+                        <td>Claude Code</td>
+                        <td>4.7/5</td>
+                        <td>$17/mo</td>
+                        <td>Complex reasoning</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="content-section">
+            <h2>Verdict</h2>
+            <p>Amazon Q is an excellent choice for teams deeply invested in the AWS ecosystem. Its code transformation capabilities are genuinely useful for legacy modernization projects, and the security scanning helps catch vulnerabilities early. The free tier is generous enough for individual developers to get started.</p>
+            <p>However, if your workflow isn't AWS-centric, tools like Cursor or GitHub Copilot may offer better flexibility. For AWS-native teams, Amazon Q delivers strong value at $19/user/month.</p>
+            <a href="https://aws.amazon.com/q/developer/" target="_blank" class="cta-button">Try Amazon Q Free</a>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2026 <a href="/">AIWareHQ</a> — AI tools reviews and recommendations</p>
+    </footer>
+</body>
+</html>
